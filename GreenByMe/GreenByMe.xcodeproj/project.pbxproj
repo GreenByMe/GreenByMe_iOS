@@ -1,0 +1,767 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2437ECF1CD54CF8159ADDE8C /* Pods_GreenByMe_GreenByMeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AC3D9E787CC8316CE8E88E3 /* Pods_GreenByMe_GreenByMeUITests.framework */; };
+		565CA4EDE4DB411C0AFE1278 /* Pods_GreenByMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E687A6C79C98E09E6D7538A /* Pods_GreenByMe.framework */; };
+		B55F717B22A505CA9A335B54 /* Pods_GreenByMeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8071A3FDA900C5F3F9D808EE /* Pods_GreenByMeTests.framework */; };
+		DACEC82424FF7C0B00B0A453 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACEC82324FF7C0B00B0A453 /* AppDelegate.swift */; };
+		DACEC82624FF7C0B00B0A453 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACEC82524FF7C0B00B0A453 /* SceneDelegate.swift */; };
+		DACEC82824FF7C0B00B0A453 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACEC82724FF7C0B00B0A453 /* ViewController.swift */; };
+		DACEC82B24FF7C0B00B0A453 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DACEC82924FF7C0B00B0A453 /* Main.storyboard */; };
+		DACEC82E24FF7C0B00B0A453 /* GreenByMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DACEC82C24FF7C0B00B0A453 /* GreenByMe.xcdatamodeld */; };
+		DACEC83024FF7C0C00B0A453 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DACEC82F24FF7C0C00B0A453 /* Assets.xcassets */; };
+		DACEC83324FF7C0C00B0A453 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DACEC83124FF7C0C00B0A453 /* LaunchScreen.storyboard */; };
+		DACEC83E24FF7C0C00B0A453 /* GreenByMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACEC83D24FF7C0C00B0A453 /* GreenByMeTests.swift */; };
+		DACEC84924FF7C0C00B0A453 /* GreenByMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACEC84824FF7C0C00B0A453 /* GreenByMeUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DACEC83A24FF7C0C00B0A453 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DACEC81824FF7C0B00B0A453 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DACEC81F24FF7C0B00B0A453;
+			remoteInfo = GreenByMe;
+		};
+		DACEC84524FF7C0C00B0A453 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DACEC81824FF7C0B00B0A453 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DACEC81F24FF7C0B00B0A453;
+			remoteInfo = GreenByMe;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		058CE3CF20F40B0277C4FD26 /* Pods-GreenByMe-GreenByMeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenByMe-GreenByMeUITests.release.xcconfig"; path = "Target Support Files/Pods-GreenByMe-GreenByMeUITests/Pods-GreenByMe-GreenByMeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		43B48BC42E3162A78889EA34 /* Pods-GreenByMe-GreenByMeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenByMe-GreenByMeUITests.debug.xcconfig"; path = "Target Support Files/Pods-GreenByMe-GreenByMeUITests/Pods-GreenByMe-GreenByMeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4D68EF1F6A52E3DB09470F01 /* Pods-GreenByMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenByMe.debug.xcconfig"; path = "Target Support Files/Pods-GreenByMe/Pods-GreenByMe.debug.xcconfig"; sourceTree = "<group>"; };
+		5AC3D9E787CC8316CE8E88E3 /* Pods_GreenByMe_GreenByMeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GreenByMe_GreenByMeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8071A3FDA900C5F3F9D808EE /* Pods_GreenByMeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GreenByMeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E687A6C79C98E09E6D7538A /* Pods_GreenByMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GreenByMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		938064D75690988F9B1808F8 /* Pods-GreenByMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenByMe.release.xcconfig"; path = "Target Support Files/Pods-GreenByMe/Pods-GreenByMe.release.xcconfig"; sourceTree = "<group>"; };
+		96DEC7D07A6E1F96B7A9E10C /* Pods-GreenByMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenByMeTests.debug.xcconfig"; path = "Target Support Files/Pods-GreenByMeTests/Pods-GreenByMeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A1CEC1B571500C559FCDF4F4 /* Pods-GreenByMeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenByMeTests.release.xcconfig"; path = "Target Support Files/Pods-GreenByMeTests/Pods-GreenByMeTests.release.xcconfig"; sourceTree = "<group>"; };
+		DACEC82024FF7C0B00B0A453 /* GreenByMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenByMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DACEC82324FF7C0B00B0A453 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DACEC82524FF7C0B00B0A453 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DACEC82724FF7C0B00B0A453 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DACEC82A24FF7C0B00B0A453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DACEC82D24FF7C0B00B0A453 /* GreenByMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GreenByMe.xcdatamodel; sourceTree = "<group>"; };
+		DACEC82F24FF7C0C00B0A453 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DACEC83224FF7C0C00B0A453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DACEC83424FF7C0C00B0A453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DACEC83924FF7C0C00B0A453 /* GreenByMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GreenByMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DACEC83D24FF7C0C00B0A453 /* GreenByMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenByMeTests.swift; sourceTree = "<group>"; };
+		DACEC83F24FF7C0C00B0A453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DACEC84424FF7C0C00B0A453 /* GreenByMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GreenByMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DACEC84824FF7C0C00B0A453 /* GreenByMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenByMeUITests.swift; sourceTree = "<group>"; };
+		DACEC84A24FF7C0C00B0A453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DACEC81D24FF7C0B00B0A453 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				565CA4EDE4DB411C0AFE1278 /* Pods_GreenByMe.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DACEC83624FF7C0C00B0A453 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B55F717B22A505CA9A335B54 /* Pods_GreenByMeTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DACEC84124FF7C0C00B0A453 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2437ECF1CD54CF8159ADDE8C /* Pods_GreenByMe_GreenByMeUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF107DBD5F146E4E04FD9A2D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E687A6C79C98E09E6D7538A /* Pods_GreenByMe.framework */,
+				5AC3D9E787CC8316CE8E88E3 /* Pods_GreenByMe_GreenByMeUITests.framework */,
+				8071A3FDA900C5F3F9D808EE /* Pods_GreenByMeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5A3CD6FA74D9CE7294B83C0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4D68EF1F6A52E3DB09470F01 /* Pods-GreenByMe.debug.xcconfig */,
+				938064D75690988F9B1808F8 /* Pods-GreenByMe.release.xcconfig */,
+				43B48BC42E3162A78889EA34 /* Pods-GreenByMe-GreenByMeUITests.debug.xcconfig */,
+				058CE3CF20F40B0277C4FD26 /* Pods-GreenByMe-GreenByMeUITests.release.xcconfig */,
+				96DEC7D07A6E1F96B7A9E10C /* Pods-GreenByMeTests.debug.xcconfig */,
+				A1CEC1B571500C559FCDF4F4 /* Pods-GreenByMeTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DACEC81724FF7C0B00B0A453 = {
+			isa = PBXGroup;
+			children = (
+				DACEC82224FF7C0B00B0A453 /* GreenByMe */,
+				DACEC83C24FF7C0C00B0A453 /* GreenByMeTests */,
+				DACEC84724FF7C0C00B0A453 /* GreenByMeUITests */,
+				DACEC82124FF7C0B00B0A453 /* Products */,
+				C5A3CD6FA74D9CE7294B83C0 /* Pods */,
+				AF107DBD5F146E4E04FD9A2D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DACEC82124FF7C0B00B0A453 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DACEC82024FF7C0B00B0A453 /* GreenByMe.app */,
+				DACEC83924FF7C0C00B0A453 /* GreenByMeTests.xctest */,
+				DACEC84424FF7C0C00B0A453 /* GreenByMeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DACEC82224FF7C0B00B0A453 /* GreenByMe */ = {
+			isa = PBXGroup;
+			children = (
+				DACEC82324FF7C0B00B0A453 /* AppDelegate.swift */,
+				DACEC82524FF7C0B00B0A453 /* SceneDelegate.swift */,
+				DACEC82724FF7C0B00B0A453 /* ViewController.swift */,
+				DACEC82924FF7C0B00B0A453 /* Main.storyboard */,
+				DACEC82F24FF7C0C00B0A453 /* Assets.xcassets */,
+				DACEC83124FF7C0C00B0A453 /* LaunchScreen.storyboard */,
+				DACEC83424FF7C0C00B0A453 /* Info.plist */,
+				DACEC82C24FF7C0B00B0A453 /* GreenByMe.xcdatamodeld */,
+			);
+			path = GreenByMe;
+			sourceTree = "<group>";
+		};
+		DACEC83C24FF7C0C00B0A453 /* GreenByMeTests */ = {
+			isa = PBXGroup;
+			children = (
+				DACEC83D24FF7C0C00B0A453 /* GreenByMeTests.swift */,
+				DACEC83F24FF7C0C00B0A453 /* Info.plist */,
+			);
+			path = GreenByMeTests;
+			sourceTree = "<group>";
+		};
+		DACEC84724FF7C0C00B0A453 /* GreenByMeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DACEC84824FF7C0C00B0A453 /* GreenByMeUITests.swift */,
+				DACEC84A24FF7C0C00B0A453 /* Info.plist */,
+			);
+			path = GreenByMeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DACEC81F24FF7C0B00B0A453 /* GreenByMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DACEC84D24FF7C0C00B0A453 /* Build configuration list for PBXNativeTarget "GreenByMe" */;
+			buildPhases = (
+				AD34F8D68E051F46CE1A77B7 /* [CP] Check Pods Manifest.lock */,
+				DACEC81C24FF7C0B00B0A453 /* Sources */,
+				DACEC81D24FF7C0B00B0A453 /* Frameworks */,
+				DACEC81E24FF7C0B00B0A453 /* Resources */,
+				7F64580208605A1C2B3D0BE1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GreenByMe;
+			productName = GreenByMe;
+			productReference = DACEC82024FF7C0B00B0A453 /* GreenByMe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DACEC83824FF7C0C00B0A453 /* GreenByMeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DACEC85024FF7C0C00B0A453 /* Build configuration list for PBXNativeTarget "GreenByMeTests" */;
+			buildPhases = (
+				3C71D17908D3C123D373265E /* [CP] Check Pods Manifest.lock */,
+				DACEC83524FF7C0C00B0A453 /* Sources */,
+				DACEC83624FF7C0C00B0A453 /* Frameworks */,
+				DACEC83724FF7C0C00B0A453 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DACEC83B24FF7C0C00B0A453 /* PBXTargetDependency */,
+			);
+			name = GreenByMeTests;
+			productName = GreenByMeTests;
+			productReference = DACEC83924FF7C0C00B0A453 /* GreenByMeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DACEC84324FF7C0C00B0A453 /* GreenByMeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DACEC85324FF7C0C00B0A453 /* Build configuration list for PBXNativeTarget "GreenByMeUITests" */;
+			buildPhases = (
+				74F25A61C851C9C347DE00D3 /* [CP] Check Pods Manifest.lock */,
+				DACEC84024FF7C0C00B0A453 /* Sources */,
+				DACEC84124FF7C0C00B0A453 /* Frameworks */,
+				DACEC84224FF7C0C00B0A453 /* Resources */,
+				A7D2F331299A33AA75C4F6CB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DACEC84624FF7C0C00B0A453 /* PBXTargetDependency */,
+			);
+			name = GreenByMeUITests;
+			productName = GreenByMeUITests;
+			productReference = DACEC84424FF7C0C00B0A453 /* GreenByMeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DACEC81824FF7C0B00B0A453 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = kimtaehoon;
+				TargetAttributes = {
+					DACEC81F24FF7C0B00B0A453 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					DACEC83824FF7C0C00B0A453 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = DACEC81F24FF7C0B00B0A453;
+					};
+					DACEC84324FF7C0C00B0A453 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = DACEC81F24FF7C0B00B0A453;
+					};
+				};
+			};
+			buildConfigurationList = DACEC81B24FF7C0B00B0A453 /* Build configuration list for PBXProject "GreenByMe" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DACEC81724FF7C0B00B0A453;
+			productRefGroup = DACEC82124FF7C0B00B0A453 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DACEC81F24FF7C0B00B0A453 /* GreenByMe */,
+				DACEC83824FF7C0C00B0A453 /* GreenByMeTests */,
+				DACEC84324FF7C0C00B0A453 /* GreenByMeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DACEC81E24FF7C0B00B0A453 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DACEC83324FF7C0C00B0A453 /* LaunchScreen.storyboard in Resources */,
+				DACEC83024FF7C0C00B0A453 /* Assets.xcassets in Resources */,
+				DACEC82B24FF7C0B00B0A453 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DACEC83724FF7C0C00B0A453 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DACEC84224FF7C0C00B0A453 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C71D17908D3C123D373265E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GreenByMeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74F25A61C851C9C347DE00D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GreenByMe-GreenByMeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F64580208605A1C2B3D0BE1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GreenByMe/Pods-GreenByMe-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GreenByMe/Pods-GreenByMe-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GreenByMe/Pods-GreenByMe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7D2F331299A33AA75C4F6CB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GreenByMe-GreenByMeUITests/Pods-GreenByMe-GreenByMeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GreenByMe-GreenByMeUITests/Pods-GreenByMe-GreenByMeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GreenByMe-GreenByMeUITests/Pods-GreenByMe-GreenByMeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD34F8D68E051F46CE1A77B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GreenByMe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DACEC81C24FF7C0B00B0A453 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DACEC82E24FF7C0B00B0A453 /* GreenByMe.xcdatamodeld in Sources */,
+				DACEC82824FF7C0B00B0A453 /* ViewController.swift in Sources */,
+				DACEC82424FF7C0B00B0A453 /* AppDelegate.swift in Sources */,
+				DACEC82624FF7C0B00B0A453 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DACEC83524FF7C0C00B0A453 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DACEC83E24FF7C0C00B0A453 /* GreenByMeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DACEC84024FF7C0C00B0A453 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DACEC84924FF7C0C00B0A453 /* GreenByMeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DACEC83B24FF7C0C00B0A453 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DACEC81F24FF7C0B00B0A453 /* GreenByMe */;
+			targetProxy = DACEC83A24FF7C0C00B0A453 /* PBXContainerItemProxy */;
+		};
+		DACEC84624FF7C0C00B0A453 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DACEC81F24FF7C0B00B0A453 /* GreenByMe */;
+			targetProxy = DACEC84524FF7C0C00B0A453 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DACEC82924FF7C0B00B0A453 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DACEC82A24FF7C0B00B0A453 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DACEC83124FF7C0C00B0A453 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DACEC83224FF7C0C00B0A453 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DACEC84B24FF7C0C00B0A453 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DACEC84C24FF7C0C00B0A453 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DACEC84E24FF7C0C00B0A453 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D68EF1F6A52E3DB09470F01 /* Pods-GreenByMe.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7Y3Y9M4N4F;
+				INFOPLIST_FILE = GreenByMe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.GreenbyMe.GreenByMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DACEC84F24FF7C0C00B0A453 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 938064D75690988F9B1808F8 /* Pods-GreenByMe.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7Y3Y9M4N4F;
+				INFOPLIST_FILE = GreenByMe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.GreenbyMe.GreenByMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DACEC85124FF7C0C00B0A453 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96DEC7D07A6E1F96B7A9E10C /* Pods-GreenByMeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7Y3Y9M4N4F;
+				INFOPLIST_FILE = GreenByMeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.GreenbyMe.GreenByMeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GreenByMe.app/GreenByMe";
+			};
+			name = Debug;
+		};
+		DACEC85224FF7C0C00B0A453 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1CEC1B571500C559FCDF4F4 /* Pods-GreenByMeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7Y3Y9M4N4F;
+				INFOPLIST_FILE = GreenByMeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.GreenbyMe.GreenByMeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GreenByMe.app/GreenByMe";
+			};
+			name = Release;
+		};
+		DACEC85424FF7C0C00B0A453 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43B48BC42E3162A78889EA34 /* Pods-GreenByMe-GreenByMeUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7Y3Y9M4N4F;
+				INFOPLIST_FILE = GreenByMeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.GreenbyMe.GreenByMeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GreenByMe;
+			};
+			name = Debug;
+		};
+		DACEC85524FF7C0C00B0A453 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 058CE3CF20F40B0277C4FD26 /* Pods-GreenByMe-GreenByMeUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7Y3Y9M4N4F;
+				INFOPLIST_FILE = GreenByMeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.GreenbyMe.GreenByMeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GreenByMe;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DACEC81B24FF7C0B00B0A453 /* Build configuration list for PBXProject "GreenByMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DACEC84B24FF7C0C00B0A453 /* Debug */,
+				DACEC84C24FF7C0C00B0A453 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DACEC84D24FF7C0C00B0A453 /* Build configuration list for PBXNativeTarget "GreenByMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DACEC84E24FF7C0C00B0A453 /* Debug */,
+				DACEC84F24FF7C0C00B0A453 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DACEC85024FF7C0C00B0A453 /* Build configuration list for PBXNativeTarget "GreenByMeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DACEC85124FF7C0C00B0A453 /* Debug */,
+				DACEC85224FF7C0C00B0A453 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DACEC85324FF7C0C00B0A453 /* Build configuration list for PBXNativeTarget "GreenByMeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DACEC85424FF7C0C00B0A453 /* Debug */,
+				DACEC85524FF7C0C00B0A453 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DACEC82C24FF7C0B00B0A453 /* GreenByMe.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DACEC82D24FF7C0B00B0A453 /* GreenByMe.xcdatamodel */,
+			);
+			currentVersion = DACEC82D24FF7C0B00B0A453 /* GreenByMe.xcdatamodel */;
+			path = GreenByMe.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DACEC81824FF7C0B00B0A453 /* Project object */;
+}
