@@ -10,6 +10,8 @@ target 'GreenByMe' do
   pod 'NSObject+Rx'
   pod 'RxDataSources'
   pod 'RxCoreData'
+  pod 'Alamofire'
+  pod 'Kingfisher'
   # Pods for GreenByMe
 
   target 'GreenByMeTests' do
