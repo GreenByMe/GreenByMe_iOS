@@ -92,6 +92,9 @@ protocol MissionStorageType {
   func callmissionList() -> Observable<[Mission]>
   
   @discardableResult
+  func loadMission(missions:[Mission]) -> Observable<[Mission]>
+  
+  @discardableResult
   func savemission(mission : Mission, duration dayCategory : String) -> Observable<Mission>
   
   @discardableResult

@@ -36,7 +36,7 @@ struct PopularMission {
         switch statusCode {
         case 200:
           let decoder = JSONDecoder()
-          guard let decodedData = try? decoder.decode(SignUpData.self, from: value) else
+          guard let decodedData = try? decoder.decode(PopularMissionData.self, from: value) else
           {
             return networkResult = .pathErr
           }
