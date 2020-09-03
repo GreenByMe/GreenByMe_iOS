@@ -20,6 +20,14 @@ class MissionStorage : MissionStorageType {
     return store
   }
   @discardableResult
+  func loadMission(missions:[Mission]) -> Observable<[Mission]>{
+    let newmissions = missions
+    store.onNext(newmissions)
+    return store
+  }
+  
+  
+  @discardableResult
   func savemission(mission: Mission, duration dayCategory: String) -> Observable<Mission> {
     
     let temp = Mission(mission: mission, duration: mission.strToDateCategory(dayCategory))
@@ -37,6 +45,9 @@ class MissionStorage : MissionStorageType {
     return Observable.just(mission)
   }
   
-  
+  @discardableResult
+  func count() -> Int {
+    return list.count
+  }
   
 }

@@ -9,9 +9,8 @@
 import Foundation
 import UIKit
 import RxSwift
-struct Mission : Equatable, Comparable {
+struct Mission : Equatable, Comparable{
   static func < (lhs: Mission, rhs: Mission) -> Bool {
-
     return true
   }
   var missionName : String
@@ -97,4 +96,7 @@ protocol MissionStorageType {
   
   @discardableResult
   func delete(mission : Mission) -> Observable<Mission>
+  
+  @discardableResult
+  func count() -> Int
 }

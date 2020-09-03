@@ -52,6 +52,15 @@
 		DA13E31D2500D4330054D663 /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E31C2500D4330054D663 /* DataStructures.swift */; };
 		DA13E31E2500D4330054D663 /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E31C2500D4330054D663 /* DataStructures.swift */; };
 		DA13E31F2500D4330054D663 /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E31C2500D4330054D663 /* DataStructures.swift */; };
+		DA13E3212500D5800054D663 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E3202500D5800054D663 /* HomeViewModel.swift */; };
+		DA13E3222500D5800054D663 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E3202500D5800054D663 /* HomeViewModel.swift */; };
+		DA13E3232500D5800054D663 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E3202500D5800054D663 /* HomeViewModel.swift */; };
+		DA13E3252500D5DA0054D663 /* HomeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA13E3242500D5DA0054D663 /* HomeView.storyboard */; };
+		DA13E3262500D5DA0054D663 /* HomeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA13E3242500D5DA0054D663 /* HomeView.storyboard */; };
+		DA13E3272500D5DA0054D663 /* HomeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA13E3242500D5DA0054D663 /* HomeView.storyboard */; };
+		DA13E3292500F7510054D663 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E3282500F7510054D663 /* Services.swift */; };
+		DA13E32A2500F7510054D663 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E3282500F7510054D663 /* Services.swift */; };
+		DA13E32B2500F7510054D663 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E3282500F7510054D663 /* Services.swift */; };
 		DACEC82424FF7C0B00B0A453 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACEC82324FF7C0B00B0A453 /* AppDelegate.swift */; };
 		DACEC82624FF7C0B00B0A453 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACEC82524FF7C0B00B0A453 /* SceneDelegate.swift */; };
 		DACEC82E24FF7C0B00B0A453 /* GreenByMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DACEC82C24FF7C0B00B0A453 /* GreenByMe.xcdatamodeld */; };
@@ -106,6 +115,9 @@
 		DA13E3142500BFAE0054D663 /* APIConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstraint.swift; sourceTree = "<group>"; };
 		DA13E3182500D3D20054D663 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		DA13E31C2500D4330054D663 /* DataStructures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructures.swift; sourceTree = "<group>"; };
+		DA13E3202500D5800054D663 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		DA13E3242500D5DA0054D663 /* HomeView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeView.storyboard; sourceTree = "<group>"; };
+		DA13E3282500F7510054D663 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		DACEC82024FF7C0B00B0A453 /* GreenByMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenByMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACEC82324FF7C0B00B0A453 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DACEC82524FF7C0B00B0A453 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -221,6 +233,7 @@
 		DA0DC95D24FF7FE600E43881 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DA13E3202500D5800054D663 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -238,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				DA0DC96D24FF815F00E43881 /* HomeViewController.swift */,
+				DA13E3242500D5DA0054D663 /* HomeView.storyboard */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -292,6 +306,7 @@
 				DA13E3142500BFAE0054D663 /* APIConstraint.swift */,
 				DA13E3182500D3D20054D663 /* NetworkResult.swift */,
 				DA13E31C2500D4330054D663 /* DataStructures.swift */,
+				DA13E3282500F7510054D663 /* Services.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -472,6 +487,7 @@
 				DA0DC98924FF855E00E43881 /* 이순신돋움체L.otf in Resources */,
 				DA13E30124FF86C80054D663 /* Spoqa Han Sans Light.ttf in Resources */,
 				DA13E30424FF86C80054D663 /* Spoqa Han Sans Thin.ttf in Resources */,
+				DA13E3252500D5DA0054D663 /* HomeView.storyboard in Resources */,
 				DA0DC98324FF855E00E43881 /* 이순신돋움체M.otf in Resources */,
 				DACEC83024FF7C0C00B0A453 /* Assets.xcassets in Resources */,
 				DA13E2FB24FF86C80054D663 /* Spoqa Han Sans Bold.ttf in Resources */,
@@ -488,6 +504,7 @@
 				DA13E30224FF86C80054D663 /* Spoqa Han Sans Light.ttf in Resources */,
 				DA13E2FF24FF86C80054D663 /* Spoqa Han Sans Regular.ttf in Resources */,
 				DA0DC98424FF855E00E43881 /* 이순신돋움체M.otf in Resources */,
+				DA13E3262500D5DA0054D663 /* HomeView.storyboard in Resources */,
 				DA0DC98724FF855E00E43881 /* 이순신돋움체B.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,6 +519,7 @@
 				DA13E30324FF86C80054D663 /* Spoqa Han Sans Light.ttf in Resources */,
 				DA13E30024FF86C80054D663 /* Spoqa Han Sans Regular.ttf in Resources */,
 				DA0DC98524FF855E00E43881 /* 이순신돋움체M.otf in Resources */,
+				DA13E3272500D5DA0054D663 /* HomeView.storyboard in Resources */,
 				DA0DC98824FF855E00E43881 /* 이순신돋움체B.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -625,6 +643,8 @@
 				DACEC82E24FF7C0B00B0A453 /* GreenByMe.xcdatamodeld in Sources */,
 				DACEC82424FF7C0B00B0A453 /* AppDelegate.swift in Sources */,
 				DA0DC96E24FF815F00E43881 /* HomeViewController.swift in Sources */,
+				DA13E3212500D5800054D663 /* HomeViewModel.swift in Sources */,
+				DA13E3292500F7510054D663 /* Services.swift in Sources */,
 				DACEC82624FF7C0B00B0A453 /* SceneDelegate.swift in Sources */,
 				DA13E3152500BFAE0054D663 /* APIConstraint.swift in Sources */,
 				DA0DC96A24FF814B00E43881 /* CertificationViewController.swift in Sources */,
@@ -638,8 +658,10 @@
 			files = (
 				DACEC83E24FF7C0C00B0A453 /* GreenByMeTests.swift in Sources */,
 				DA13E31A2500D3D30054D663 /* NetworkResult.swift in Sources */,
+				DA13E3222500D5800054D663 /* HomeViewModel.swift in Sources */,
 				DA13E3162500BFAE0054D663 /* APIConstraint.swift in Sources */,
 				DA13E31E2500D4330054D663 /* DataStructures.swift in Sources */,
+				DA13E32A2500F7510054D663 /* Services.swift in Sources */,
 				DA13E3112500BAEA0054D663 /* MissionStorage.swift in Sources */,
 				DA13E3092500AE870054D663 /* CampainModel.swift in Sources */,
 			);
@@ -651,8 +673,10 @@
 			files = (
 				DACEC84924FF7C0C00B0A453 /* GreenByMeUITests.swift in Sources */,
 				DA13E31B2500D3D30054D663 /* NetworkResult.swift in Sources */,
+				DA13E3232500D5800054D663 /* HomeViewModel.swift in Sources */,
 				DA13E3172500BFAE0054D663 /* APIConstraint.swift in Sources */,
 				DA13E31F2500D4330054D663 /* DataStructures.swift in Sources */,
+				DA13E32B2500F7510054D663 /* Services.swift in Sources */,
 				DA13E3122500BAEA0054D663 /* MissionStorage.swift in Sources */,
 				DA13E30A2500AE870054D663 /* CampainModel.swift in Sources */,
 			);
