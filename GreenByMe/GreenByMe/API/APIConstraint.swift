@@ -8,7 +8,7 @@
 
 import Foundation
 struct APIConstraints {
-  static let baseURL = "http://ec2-13-58-104-154.us-east-2.compute.amazonaws.com:8080/api/"
+  static let baseURL = "https://cafecube.iptime.org/api/"
   static let page = baseURL + "page"
   static let cert = page + "/cert"
   static let home = page + "/home"
@@ -24,7 +24,7 @@ struct APIConstraints {
   static let signin = user + "/signin"
   static let signup = user + "/signup"
   
-  static let missionData = baseURL + "/missions"
+  static let missionData = baseURL + "missions"
   static let missionInfo = missionData + "/"
   static let categoryInfo = missionData + "/categorys/"
   static let daycategory = "/daycategory/"

@@ -61,6 +61,9 @@
 		DA13E3292500F7510054D663 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E3282500F7510054D663 /* Services.swift */; };
 		DA13E32A2500F7510054D663 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E3282500F7510054D663 /* Services.swift */; };
 		DA13E32B2500F7510054D663 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E3282500F7510054D663 /* Services.swift */; };
+		DA13E32E250221AC0054D663 /* PopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E32D250221AC0054D663 /* PopularCollectionViewCell.swift */; };
+		DA13E32F250221AC0054D663 /* PopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E32D250221AC0054D663 /* PopularCollectionViewCell.swift */; };
+		DA13E330250221AD0054D663 /* PopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E32D250221AC0054D663 /* PopularCollectionViewCell.swift */; };
 		DACEC82424FF7C0B00B0A453 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACEC82324FF7C0B00B0A453 /* AppDelegate.swift */; };
 		DACEC82624FF7C0B00B0A453 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACEC82524FF7C0B00B0A453 /* SceneDelegate.swift */; };
 		DACEC82E24FF7C0B00B0A453 /* GreenByMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DACEC82C24FF7C0B00B0A453 /* GreenByMe.xcdatamodeld */; };
@@ -118,6 +121,7 @@
 		DA13E3202500D5800054D663 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		DA13E3242500D5DA0054D663 /* HomeView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeView.storyboard; sourceTree = "<group>"; };
 		DA13E3282500F7510054D663 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		DA13E32D250221AC0054D663 /* PopularCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewCell.swift; sourceTree = "<group>"; };
 		DACEC82024FF7C0B00B0A453 /* GreenByMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenByMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACEC82324FF7C0B00B0A453 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DACEC82524FF7C0B00B0A453 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -250,6 +254,7 @@
 		DA0DC95F24FF7FFD00E43881 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				DA13E32C2502218D0054D663 /* Cells */,
 				DA0DC96D24FF815F00E43881 /* HomeViewController.swift */,
 				DA13E3242500D5DA0054D663 /* HomeView.storyboard */,
 			);
@@ -309,6 +314,14 @@
 				DA13E3282500F7510054D663 /* Services.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		DA13E32C2502218D0054D663 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DA13E32D250221AC0054D663 /* PopularCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		DACEC81724FF7C0B00B0A453 = {
@@ -638,6 +651,7 @@
 				DA13E3082500AE870054D663 /* CampainModel.swift in Sources */,
 				DA0DC96824FF813B00E43881 /* MyPageViewController.swift in Sources */,
 				DA13E3192500D3D30054D663 /* NetworkResult.swift in Sources */,
+				DA13E32E250221AC0054D663 /* PopularCollectionViewCell.swift in Sources */,
 				DA13E31D2500D4330054D663 /* DataStructures.swift in Sources */,
 				DA0DC96C24FF815300E43881 /* SearchViewController.swift in Sources */,
 				DACEC82E24FF7C0B00B0A453 /* GreenByMe.xcdatamodeld in Sources */,
@@ -662,6 +676,7 @@
 				DA13E3162500BFAE0054D663 /* APIConstraint.swift in Sources */,
 				DA13E31E2500D4330054D663 /* DataStructures.swift in Sources */,
 				DA13E32A2500F7510054D663 /* Services.swift in Sources */,
+				DA13E32F250221AC0054D663 /* PopularCollectionViewCell.swift in Sources */,
 				DA13E3112500BAEA0054D663 /* MissionStorage.swift in Sources */,
 				DA13E3092500AE870054D663 /* CampainModel.swift in Sources */,
 			);
@@ -677,6 +692,7 @@
 				DA13E3172500BFAE0054D663 /* APIConstraint.swift in Sources */,
 				DA13E31F2500D4330054D663 /* DataStructures.swift in Sources */,
 				DA13E32B2500F7510054D663 /* Services.swift in Sources */,
+				DA13E330250221AD0054D663 /* PopularCollectionViewCell.swift in Sources */,
 				DA13E3122500BAEA0054D663 /* MissionStorage.swift in Sources */,
 				DA13E30A2500AE870054D663 /* CampainModel.swift in Sources */,
 			);
