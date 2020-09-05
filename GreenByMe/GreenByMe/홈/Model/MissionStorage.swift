@@ -22,7 +22,8 @@ class MissionStorage : MissionStorageType {
   @discardableResult
   func loadMission(missions:[Mission]) -> Observable<[Mission]>{
     let newmissions = missions
-    store.onNext(newmissions)
+    list = missions
+    store.onNext(list)
     return store
   }
   

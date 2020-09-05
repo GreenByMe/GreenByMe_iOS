@@ -18,8 +18,10 @@ struct SignUpService {
 }
 
 struct PopularMission {
-  static let shared = PopularMission()
-  func getPopularMissions(completion : @escaping (NetworkResult<Any>) -> Void) {
+  static var shared = PopularMission()
+  var completionHandler : [(NetworkResult<Any>) -> Void] = []
+
+  mutating func getPopularMissions(completion : @escaping (NetworkResult<Any>) -> Void) {
     let header : HTTPHeaders = ["Content-Type" : "application/json"]
     let url = APIConstraints.popularmission
     let dataRequest = AF.request(url, method: .get, encoding: JSONEncoding.default, headers: header)
@@ -45,9 +47,12 @@ struct PopularMission {
           networkResult = .netwrokFail
         }
         completion(networkResult!)
+        
       case .failure : completion(.netwrokFail)
       }
     }
+    completionHandler.append(completion)
+    return
   }
   
 }
