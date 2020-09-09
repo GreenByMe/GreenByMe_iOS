@@ -11,6 +11,9 @@ import UIKit
 import RxSwift
 import RxCocoa
 import Action
+import RxDataSources
+
+
 class HomeCommonViewModel : NSObject {
   let storage : MissionStorageType
   init(storage : MissionStorageType) {
@@ -18,37 +21,56 @@ class HomeCommonViewModel : NSObject {
   }
 }
 class HomeViewModel : HomeCommonViewModel{
+  let disposeBag = DisposeBag()
+  //var vc = HomeViewController?.self
+  private var popMissions : [Mission] = []
+  
+  var completionHandler : [() -> Void] = []
+  
+  var getPopularMissions :[Mission] {
+    switch PopularMission.shared.getPopularMissions() {
+    case .success(let data) :
+      var temp : [Mission] = []
+      let data = data as! MissionInfo
+      for contents in data.contents {
+        let tempMission = Mission(missionName: contents.subject, category: .ALL, missionId: contents.missionId, dateCategory: .ALL, missionDescription: contents.description, expectTree: contents.expectTree, expectCo2: contents.expectCo2, missionImg: UIImage(), startDate: "", endDate: "", passCandidateCount: contents.passCandidateCount, progressByMissionId: 0, id: "")
+        temp.append(tempMission)
+      }
+      self.popMissions = temp
+      temp.removeAll()
+      self.storage.loadMission(missions: self.popMissions)
+    case .netwrokFail : print("networkFail")
+    case .pathErr : print("pathErr")
+    case .serverErr : print("serverErr")
+    case .requestErr( _) : print("requestErr")
+    }
+    print(popMissions)
+    return popMissions
+  }
+  //private let popularService : PopularMissionApi
+  let service = PopularMissionService.shared
+  
+  func process() -> Void {
+    self.service
+      .fetchMissions()
+    .map({ (popmissions) in
+      var temp : [Mission] = []
+      for contents in popmissions.data.contents {
+         let tempMission = Mission(missionName: contents.subject, category: .ALL, missionId: contents.missionID, dateCategory: .ALL, missionDescription: contents.contentDescription, expectTree: contents.expectTree, expectCo2: contents.expectCo2, missionImg: UIImage(), startDate: "", endDate: "", passCandidateCount: contents.passCandidatesCount, progressByMissionId: 0, id: "")
+        temp.append(tempMission)
+      }
+      self.popMissions = temp
+    })
+    .subscribe()
+    .disposed(by: disposeBag)
+  }
   var userMissionList : Observable<[Mission]> {
     return storage.callmissionList()
   }
-  var popularMission : [Mission] {
-    var mission : [Mission] = []
-    PopularMission.shared.getPopularMissions() {
-      networkResult in
-      switch networkResult {
-      case .success(let data):
-        guard let data = data as? MissionInfo  else { return}
-        let temp = data.contents
-        var popMission : [Mission] = []
-        for content in temp {
-          popMission.append(Mission(missionName: content.subject, category: .ALL, missionId: content.missionId, dateCategory: .ALL, missionDescription: content.description, expectTree: content.expectTree, expectCo2: content.expectCo2, missionImg: UIImage() , startDate: "", endDate: "", passCandidateCount: content.passCandidateCount, progressByMissionId: 0))
-        }
-        mission = popMission
-        self.storage.loadMission(missions: popMission)
-        dump(self.storage)
-      case .pathErr : print("pathErr")
-      case .serverErr : print("serverErr")
-      case .netwrokFail: print("networkFail")
-      case .requestErr(let message):
-        print(message)
-      }
-    }
-    dump(PopularMission.shared.completionHandler)
-    PopularMission.shared.completionHandler[0](.success(MissionInfo()))
-    return mission
-  }
   var popularMissionList : Observable<[Mission]> {
-    dump(popularMission)
+//    print(getPopularMissions)
+//    dump(storage)
+//    print(completionHandler)
     return storage.callmissionList()
   }
   var userMissionCount : Int {

@@ -13,7 +13,9 @@ import NSObject_Rx
 class HomeViewController : UIViewController {
   var viewModel = HomeViewModel(storage: MissionStorage())
     override func viewDidLoad() {
+      viewModel.process()
         super.viewDidLoad()
+      viewModel.storage.loadMission(missions: viewModel.getPopularMissions)
       bindViewModel()
         // Do any additional setup after loading the view.
     }
@@ -22,6 +24,8 @@ class HomeViewController : UIViewController {
     let layout = popularMissionCollectionView.collectionViewLayout as? UICollectionViewFlowLayout
     layout?.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
     layout?.minimumInteritemSpacing = 10
+    
+    
     viewModel.popularMissionList.bind(to :
     popularMissionCollectionView.rx.items(cellIdentifier: PopularCollectionViewCell.identifier, cellType: PopularCollectionViewCell.self)) { row, cellModel, cell in
       cell.missionName.text = cellModel.missionName
@@ -31,7 +35,6 @@ class HomeViewController : UIViewController {
       cell.backgroundColor = .brown
     }
     .disposed(by: rx.disposeBag)
-
   }
   @IBOutlet weak var userName: UILabel!
   @IBOutlet weak var totalExpectTree: UILabel!

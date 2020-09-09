@@ -8,11 +8,14 @@
 
 import Foundation
 import UIKit
-import RxSwift
-struct Mission : Equatable, Comparable{
+import RxDataSources
+struct Mission : Equatable, Comparable, IdentifiableType{
+  
+  
   static func < (lhs: Mission, rhs: Mission) -> Bool {
     return true
   }
+  var identity : String
   var missionName : String
   var category : MissionCategory
   var missionId : Int
@@ -66,7 +69,7 @@ struct Mission : Equatable, Comparable{
     case MONTH
   }
   
-  init (missionName : String,category : MissionCategory,missionId : Int,dateCategory : DateCategory,missionDescription : String,expectTree : Double,expectCo2 : Double,missionImg : UIImage,startDate : String,endDate : String,passCandidateCount : Int, progressByMissionId : Int) {
+  init (missionName : String,category : MissionCategory,missionId : Int,dateCategory : DateCategory,missionDescription : String,expectTree : Double,expectCo2 : Double,missionImg : UIImage,startDate : String,endDate : String,passCandidateCount : Int, progressByMissionId : Int, id :String) {
     self.missionName = missionName
     self.category = category
     self.missionId = missionId
@@ -79,13 +82,14 @@ struct Mission : Equatable, Comparable{
     self.endDate = endDate
     self.passCandidateCount = passCandidateCount
     self.progressByMissionId = progressByMissionId
+    self.identity = id
   }
   init ( mission : Mission , duration : DateCategory){
     self = mission
     self.dateCategory = duration
   }
 }
-
+import RxSwift
 //MARK : 캠페인 프로토콜
 protocol MissionStorageType {
   @discardableResult

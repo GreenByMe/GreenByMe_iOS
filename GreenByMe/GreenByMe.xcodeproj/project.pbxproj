@@ -64,6 +64,14 @@
 		DA13E32E250221AC0054D663 /* PopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E32D250221AC0054D663 /* PopularCollectionViewCell.swift */; };
 		DA13E32F250221AC0054D663 /* PopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E32D250221AC0054D663 /* PopularCollectionViewCell.swift */; };
 		DA13E330250221AD0054D663 /* PopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E32D250221AC0054D663 /* PopularCollectionViewCell.swift */; };
+		DA5E8FB12508B49F00715D9E /* HttpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E8FB02508B49F00715D9E /* HttpRouter.swift */; };
+		DA5E8FB32508B52300715D9E /* HttpServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E8FB22508B52300715D9E /* HttpServices.swift */; };
+		DA5E8FB52508B58400715D9E /* PopularHttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E8FB42508B58400715D9E /* PopularHttpService.swift */; };
+		DA5E8FB72508B61100715D9E /* PopularHttpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E8FB62508B61100715D9E /* PopularHttpRouter.swift */; };
+		DA5E8FB92508B8BE00715D9E /* PopularMissionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E8FB82508B8BE00715D9E /* PopularMissionService.swift */; };
+		DA5E8FBB2508B8E900715D9E /* PopularMissionApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E8FBA2508B8E900715D9E /* PopularMissionApi.swift */; };
+		DA5E8FBE2508B9FA00715D9E /* PopularMissionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E8FBD2508B9FA00715D9E /* PopularMissionModel.swift */; };
+		DA5E8FC02508C16800715D9E /* CustomErr.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E8FBF2508C16800715D9E /* CustomErr.swift */; };
 		DACEC82424FF7C0B00B0A453 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACEC82324FF7C0B00B0A453 /* AppDelegate.swift */; };
 		DACEC82624FF7C0B00B0A453 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACEC82524FF7C0B00B0A453 /* SceneDelegate.swift */; };
 		DACEC82E24FF7C0B00B0A453 /* GreenByMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DACEC82C24FF7C0B00B0A453 /* GreenByMe.xcdatamodeld */; };
@@ -122,6 +130,14 @@
 		DA13E3242500D5DA0054D663 /* HomeView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeView.storyboard; sourceTree = "<group>"; };
 		DA13E3282500F7510054D663 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		DA13E32D250221AC0054D663 /* PopularCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewCell.swift; sourceTree = "<group>"; };
+		DA5E8FB02508B49F00715D9E /* HttpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRouter.swift; sourceTree = "<group>"; };
+		DA5E8FB22508B52300715D9E /* HttpServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpServices.swift; sourceTree = "<group>"; };
+		DA5E8FB42508B58400715D9E /* PopularHttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularHttpService.swift; sourceTree = "<group>"; };
+		DA5E8FB62508B61100715D9E /* PopularHttpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularHttpRouter.swift; sourceTree = "<group>"; };
+		DA5E8FB82508B8BE00715D9E /* PopularMissionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMissionService.swift; sourceTree = "<group>"; };
+		DA5E8FBA2508B8E900715D9E /* PopularMissionApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMissionApi.swift; sourceTree = "<group>"; };
+		DA5E8FBD2508B9FA00715D9E /* PopularMissionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMissionModel.swift; sourceTree = "<group>"; };
+		DA5E8FBF2508C16800715D9E /* CustomErr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErr.swift; sourceTree = "<group>"; };
 		DACEC82024FF7C0B00B0A453 /* GreenByMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenByMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACEC82324FF7C0B00B0A453 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DACEC82524FF7C0B00B0A453 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -324,6 +340,36 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		DA5E8FAE2508B47100715D9E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DA5E8FB82508B8BE00715D9E /* PopularMissionService.swift */,
+				DA5E8FBA2508B8E900715D9E /* PopularMissionApi.swift */,
+				DA5E8FAF2508B48200715D9E /* HTTP */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DA5E8FAF2508B48200715D9E /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				DA5E8FB02508B49F00715D9E /* HttpRouter.swift */,
+				DA5E8FB22508B52300715D9E /* HttpServices.swift */,
+				DA5E8FB42508B58400715D9E /* PopularHttpService.swift */,
+				DA5E8FB62508B61100715D9E /* PopularHttpRouter.swift */,
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
+		DA5E8FBC2508B9ED00715D9E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DA5E8FBD2508B9FA00715D9E /* PopularMissionModel.swift */,
+				DA5E8FBF2508C16800715D9E /* CustomErr.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		DACEC81724FF7C0B00B0A453 = {
 			isa = PBXGroup;
 			children = (
@@ -349,6 +395,8 @@
 		DACEC82224FF7C0B00B0A453 /* GreenByMe */ = {
 			isa = PBXGroup;
 			children = (
+				DA5E8FBC2508B9ED00715D9E /* Models */,
+				DA5E8FAE2508B47100715D9E /* Service */,
 				DA13E3132500BF8D0054D663 /* API */,
 				DA0DC97124FF82DD00E43881 /* Resources */,
 				DA0DC95C24FF7CA500E43881 /* Home */,
@@ -653,16 +701,24 @@
 				DA13E3192500D3D30054D663 /* NetworkResult.swift in Sources */,
 				DA13E32E250221AC0054D663 /* PopularCollectionViewCell.swift in Sources */,
 				DA13E31D2500D4330054D663 /* DataStructures.swift in Sources */,
+				DA5E8FBE2508B9FA00715D9E /* PopularMissionModel.swift in Sources */,
 				DA0DC96C24FF815300E43881 /* SearchViewController.swift in Sources */,
+				DA5E8FB12508B49F00715D9E /* HttpRouter.swift in Sources */,
 				DACEC82E24FF7C0B00B0A453 /* GreenByMe.xcdatamodeld in Sources */,
 				DACEC82424FF7C0B00B0A453 /* AppDelegate.swift in Sources */,
 				DA0DC96E24FF815F00E43881 /* HomeViewController.swift in Sources */,
+				DA5E8FBB2508B8E900715D9E /* PopularMissionApi.swift in Sources */,
 				DA13E3212500D5800054D663 /* HomeViewModel.swift in Sources */,
+				DA5E8FB92508B8BE00715D9E /* PopularMissionService.swift in Sources */,
 				DA13E3292500F7510054D663 /* Services.swift in Sources */,
 				DACEC82624FF7C0B00B0A453 /* SceneDelegate.swift in Sources */,
+				DA5E8FB72508B61100715D9E /* PopularHttpRouter.swift in Sources */,
 				DA13E3152500BFAE0054D663 /* APIConstraint.swift in Sources */,
 				DA0DC96A24FF814B00E43881 /* CertificationViewController.swift in Sources */,
 				DA0DC96624FF812E00E43881 /* SignUpViewController.swift in Sources */,
+				DA5E8FB32508B52300715D9E /* HttpServices.swift in Sources */,
+				DA5E8FC02508C16800715D9E /* CustomErr.swift in Sources */,
+				DA5E8FB52508B58400715D9E /* PopularHttpService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

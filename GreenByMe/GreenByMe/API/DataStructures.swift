@@ -111,6 +111,5 @@ struct  Contents : Codable {
     expectTree  = (try? values.decode(Double.self, forKey: .expectTree)) ?? 0.0
     expectCo2  = (try? values.decode(Double.self, forKey: .expectCo2)) ?? 0.0
     passCandidateCount  = (try? values.decode(Int.self, forKey: .passCandidateCount)) ?? 0
-
   }
 }

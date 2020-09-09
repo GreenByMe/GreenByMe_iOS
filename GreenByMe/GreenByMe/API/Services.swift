@@ -20,10 +20,10 @@ struct SignUpService {
 struct PopularMission {
   static var shared = PopularMission()
   var completionHandler : [(NetworkResult<Any>) -> Void] = []
-
-  mutating func getPopularMissions(completion : @escaping (NetworkResult<Any>) -> Void) {
+  mutating func getPopularMissions() -> NetworkResult<Any> {
     let header : HTTPHeaders = ["Content-Type" : "application/json"]
     let url = APIConstraints.popularmission
+    var networkResult : NetworkResult<Any>?
     let dataRequest = AF.request(url, method: .get, encoding: JSONEncoding.default, headers: header)
     dataRequest.responseData {
       dataResponse in
@@ -31,7 +31,6 @@ struct PopularMission {
       case.success(let value) :
         guard let statusCode = dataResponse.response?.statusCode else{return}
 //        guard let value = dataResponse.result.value else {return}
-        var networkResult : NetworkResult<Any>?
         switch statusCode {
         case 200:
           let decoder = JSONDecoder()
@@ -46,13 +45,11 @@ struct PopularMission {
         default :
           networkResult = .netwrokFail
         }
-        completion(networkResult!)
-        
-      case .failure : completion(.netwrokFail)
+      case .failure : networkResult = .netwrokFail
       }
     }
-    completionHandler.append(completion)
-    return
+    print(dataRequest)
+    return networkResult ?? NetworkResult.netwrokFail
   }
   
 }

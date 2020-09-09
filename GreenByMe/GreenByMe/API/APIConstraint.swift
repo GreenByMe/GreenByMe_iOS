@@ -7,6 +7,10 @@
 //
 
 import Foundation
+import Alamofire
+import SwiftyJSON
+
+
 struct APIConstraints {
   static let baseURL = "https://cafecube.iptime.org/api/"
   static let page = baseURL + "page"
@@ -31,3 +35,4 @@ struct APIConstraints {
   static let missionImg = missionData + "/images/"
   static let popularmission = missionData + "/populars"
 }
+

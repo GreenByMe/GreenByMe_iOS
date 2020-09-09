@@ -12,6 +12,7 @@ target 'GreenByMe' do
   pod 'RxCoreData'
   pod 'Alamofire'
   pod 'Kingfisher'
+  pod 'SwiftyJSON'
   # Pods for GreenByMe
 
   target 'GreenByMeTests' do
