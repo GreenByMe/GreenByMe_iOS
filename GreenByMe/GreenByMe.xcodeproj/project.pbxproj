@@ -72,6 +72,11 @@
 		DA5E8FBB2508B8E900715D9E /* PopularMissionApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E8FBA2508B8E900715D9E /* PopularMissionApi.swift */; };
 		DA5E8FBE2508B9FA00715D9E /* PopularMissionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E8FBD2508B9FA00715D9E /* PopularMissionModel.swift */; };
 		DA5E8FC02508C16800715D9E /* CustomErr.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E8FBF2508C16800715D9E /* CustomErr.swift */; };
+		DAADAEF22509DB54006132C5 /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAADAEF12509DB54006132C5 /* MainTabBar.storyboard */; };
+		DAADAEF42509DB97006132C5 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADAEF32509DB97006132C5 /* TabbarViewController.swift */; };
+		DAADAEF62509DC1B006132C5 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAADAEF52509DC1B006132C5 /* Search.storyboard */; };
+		DAADAEF82509DD11006132C5 /* Certification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAADAEF72509DD11006132C5 /* Certification.storyboard */; };
+		DAADAEFA2509DD1D006132C5 /* Mypage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAADAEF92509DD1D006132C5 /* Mypage.storyboard */; };
 		DACEC82424FF7C0B00B0A453 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACEC82324FF7C0B00B0A453 /* AppDelegate.swift */; };
 		DACEC82624FF7C0B00B0A453 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACEC82524FF7C0B00B0A453 /* SceneDelegate.swift */; };
 		DACEC82E24FF7C0B00B0A453 /* GreenByMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DACEC82C24FF7C0B00B0A453 /* GreenByMe.xcdatamodeld */; };
@@ -138,6 +143,11 @@
 		DA5E8FBA2508B8E900715D9E /* PopularMissionApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMissionApi.swift; sourceTree = "<group>"; };
 		DA5E8FBD2508B9FA00715D9E /* PopularMissionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMissionModel.swift; sourceTree = "<group>"; };
 		DA5E8FBF2508C16800715D9E /* CustomErr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErr.swift; sourceTree = "<group>"; };
+		DAADAEF12509DB54006132C5 /* MainTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBar.storyboard; sourceTree = "<group>"; };
+		DAADAEF32509DB97006132C5 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
+		DAADAEF52509DC1B006132C5 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		DAADAEF72509DD11006132C5 /* Certification.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Certification.storyboard; sourceTree = "<group>"; };
+		DAADAEF92509DD1D006132C5 /* Mypage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mypage.storyboard; sourceTree = "<group>"; };
 		DACEC82024FF7C0B00B0A453 /* GreenByMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenByMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACEC82324FF7C0B00B0A453 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DACEC82524FF7C0B00B0A453 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -217,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				DA0DC96724FF813B00E43881 /* MyPageViewController.swift */,
+				DAADAEF92509DD1D006132C5 /* Mypage.storyboard */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -225,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				DA0DC96924FF814B00E43881 /* CertificationViewController.swift */,
+				DAADAEF72509DD11006132C5 /* Certification.storyboard */,
 			);
 			path = Certification;
 			sourceTree = "<group>";
@@ -281,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				DA0DC96B24FF815300E43881 /* SearchViewController.swift */,
+				DAADAEF52509DC1B006132C5 /* Search.storyboard */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -406,6 +419,8 @@
 				DA0DC95824FF7C9900E43881 /* SignUp */,
 				DACEC82324FF7C0B00B0A453 /* AppDelegate.swift */,
 				DACEC82524FF7C0B00B0A453 /* SceneDelegate.swift */,
+				DAADAEF12509DB54006132C5 /* MainTabBar.storyboard */,
+				DAADAEF32509DB97006132C5 /* TabbarViewController.swift */,
 				DACEC82F24FF7C0C00B0A453 /* Assets.xcassets */,
 				DACEC83124FF7C0C00B0A453 /* LaunchScreen.storyboard */,
 				DACEC83424FF7C0C00B0A453 /* Info.plist */,
@@ -548,10 +563,14 @@
 				DA0DC98924FF855E00E43881 /* 이순신돋움체L.otf in Resources */,
 				DA13E30124FF86C80054D663 /* Spoqa Han Sans Light.ttf in Resources */,
 				DA13E30424FF86C80054D663 /* Spoqa Han Sans Thin.ttf in Resources */,
+				DAADAEFA2509DD1D006132C5 /* Mypage.storyboard in Resources */,
 				DA13E3252500D5DA0054D663 /* HomeView.storyboard in Resources */,
 				DA0DC98324FF855E00E43881 /* 이순신돋움체M.otf in Resources */,
+				DAADAEF22509DB54006132C5 /* MainTabBar.storyboard in Resources */,
 				DACEC83024FF7C0C00B0A453 /* Assets.xcassets in Resources */,
+				DAADAEF82509DD11006132C5 /* Certification.storyboard in Resources */,
 				DA13E2FB24FF86C80054D663 /* Spoqa Han Sans Bold.ttf in Resources */,
+				DAADAEF62509DC1B006132C5 /* Search.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -698,6 +717,7 @@
 				DA13E3102500BAEA0054D663 /* MissionStorage.swift in Sources */,
 				DA13E3082500AE870054D663 /* CampainModel.swift in Sources */,
 				DA0DC96824FF813B00E43881 /* MyPageViewController.swift in Sources */,
+				DAADAEF42509DB97006132C5 /* TabbarViewController.swift in Sources */,
 				DA13E3192500D3D30054D663 /* NetworkResult.swift in Sources */,
 				DA13E32E250221AC0054D663 /* PopularCollectionViewCell.swift in Sources */,
 				DA13E31D2500D4330054D663 /* DataStructures.swift in Sources */,

@@ -131,32 +131,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5QC-92-GJg">
-                                <rect key="frame" x="18" y="88" width="34" height="32"/>
+                                <rect key="frame" x="18" y="88" width="17" height="16"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="17" id="EHg-va-ciK"/>
                                     <constraint firstAttribute="width" secondItem="5QC-92-GJg" secondAttribute="height" multiplier="17:16" id="V4i-96-QI9"/>
+                                    <constraint firstAttribute="height" constant="16" id="Y1Q-ed-uHH"/>
                                 </constraints>
                                 <state key="normal" image="arrow-back-sharp"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프로필 설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDk-AZ-Ygq">
-                                <rect key="frame" x="14" y="145" width="154.5" height="47.5"/>
+                                <rect key="frame" x="14" y="129" width="154.5" height="47.5"/>
                                 <fontDescription key="fontDescription" name="SpoqaHanSans-Light" family="SpoqaHanSans" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slr-w2-pKN">
-                                <rect key="frame" x="165.5" y="283" width="83" height="66.5"/>
+                                <rect key="frame" x="165.5" y="267" width="83" height="66.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="slr-w2-pKN" secondAttribute="height" multiplier="134:109" id="7HM-L8-xwH"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="person.crop.circle.badge.plus" catalog="system"/>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="이름 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6DX-0x-76u">
-                                <rect key="frame" x="16" y="410" width="382" height="22.5"/>
+                                <rect key="frame" x="16" y="394" width="382" height="22.5"/>
                                 <fontDescription key="fontDescription" name="SpoqaHanSans-Regular" family="SpoqaHanSans" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZr-yf-4AI">
-                                <rect key="frame" x="42" y="527.5" width="330" height="57"/>
+                                <rect key="frame" x="42" y="511.5" width="330" height="57"/>
                                 <color key="backgroundColor" red="0.83957700059999996" green="0.83828111699999996" blue="0.84267407660000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="zZr-yf-4AI" secondAttribute="height" multiplier="276:48" id="ppQ-gs-Nt6"/>
@@ -167,7 +169,7 @@
                                 </state>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nS2-Eq-0uO">
-                                <rect key="frame" x="16" y="448.5" width="382" height="1"/>
+                                <rect key="frame" x="16" y="432.5" width="382" height="1"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="fex-SR-HDO"/>
@@ -203,7 +205,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow-back-sharp" width="34" height="32"/>
+        <image name="arrow-back-sharp" width="90" height="86"/>
         <image name="person.crop.circle.badge.plus" catalog="system" width="128" height="101"/>
     </resources>
 </document>
