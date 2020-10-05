@@ -27,43 +27,7 @@ class HomeViewModel : HomeCommonViewModel{
   
   var completionHandler : [() -> Void] = []
   
-  var getPopularMissions :[Mission] {
-    switch PopularMission.shared.getPopularMissions() {
-    case .success(let data) :
-      var temp : [Mission] = []
-      let data = data as! MissionInfo
-      for contents in data.contents {
-        let tempMission = Mission(missionName: contents.subject, category: .ALL, missionId: contents.missionId, dateCategory: .ALL, missionDescription: contents.description, expectTree: contents.expectTree, expectCo2: contents.expectCo2, missionImg: UIImage(), startDate: "", endDate: "", passCandidateCount: contents.passCandidateCount, progressByMissionId: 0, id: "")
-        temp.append(tempMission)
-      }
-      self.popMissions = temp
-      temp.removeAll()
-      self.storage.loadMission(missions: self.popMissions)
-    case .netwrokFail : print("networkFail")
-    case .pathErr : print("pathErr")
-    case .serverErr : print("serverErr")
-    case .requestErr( _) : print("requestErr")
-    }
-    print(popMissions)
-    return popMissions
-  }
   //private let popularService : PopularMissionApi
-  let service = PopularMissionService.shared
-  
-  func process() -> Void {
-    self.service
-      .fetchMissions()
-    .map({ (popmissions) in
-      var temp : [Mission] = []
-      for contents in popmissions.data.contents {
-         let tempMission = Mission(missionName: contents.subject, category: .ALL, missionId: contents.missionID, dateCategory: .ALL, missionDescription: contents.contentDescription, expectTree: contents.expectTree, expectCo2: contents.expectCo2, missionImg: UIImage(), startDate: "", endDate: "", passCandidateCount: contents.passCandidatesCount, progressByMissionId: 0, id: "")
-        temp.append(tempMission)
-      }
-      self.popMissions = temp
-    })
-    .subscribe()
-    .disposed(by: disposeBag)
-  }
   var userMissionList : Observable<[Mission]> {
     return storage.callmissionList()
   }
