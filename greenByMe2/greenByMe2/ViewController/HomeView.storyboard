@@ -178,6 +178,9 @@
                                                             <constraint firstAttribute="width" constant="28" id="fr2-yd-ihv"/>
                                                         </constraints>
                                                         <state key="normal" image="chevron.right" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="gotoDetailView:" destination="rbU-zU-MFN" eventType="touchUpInside" id="rzc-Wa-sgk"/>
+                                                        </connections>
                                                     </button>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="beV-Mc-xxZ">
                                                         <rect key="frame" x="0.0" y="302" width="360" height="133"/>
@@ -563,7 +566,7 @@
         <!--인기 캠페인 -->
         <scene sceneID="6dp-we-bEf">
             <objects>
-                <viewController id="IAh-6n-BBy" sceneMemberID="viewController">
+                <viewController id="IAh-6n-BBy" customClass="PopularTableViewController" customModule="greenByMe2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qDl-wn-aIt">
                         <rect key="frame" x="0.0" y="0.0" width="360" height="1240"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -575,7 +578,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="360" height="1118"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="uAm-Jg-HL1">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tablecell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tablecell" id="uAm-Jg-HL1" customClass="PopularMissionTableViewCell" customModule="greenByMe2" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="360" height="90.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uAm-Jg-HL1" id="Epj-1C-kj4">
@@ -642,6 +645,13 @@
                                                         <constraint firstItem="kKj-6d-DvH" firstAttribute="leading" secondItem="Epj-1C-kj4" secondAttribute="leading" constant="16" id="hbH-Z6-R5F"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="duration" destination="L0G-3O-bgl" id="i1x-c7-eTn"/>
+                                                    <outlet property="hashtag" destination="vvt-Bo-Okb" id="enW-a2-bbv"/>
+                                                    <outlet property="missionImg" destination="8GI-On-YaF" id="MIB-VB-bvA"/>
+                                                    <outlet property="rank" destination="kKj-6d-DvH" id="aKk-Vf-pi6"/>
+                                                    <outlet property="title" destination="p9u-75-gCk" id="z3P-Qy-htT"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
@@ -667,6 +677,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="인기 캠페인 " id="ANs-lk-kS1"/>
                     <size key="freeformSize" width="360" height="1240"/>
+                    <connections>
+                        <outlet property="tableView" destination="88Z-cb-Dk7" id="itu-eE-Qjq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qUh-BN-WGV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1037,7 +1050,7 @@
         <!--Navigation Controller-->
         <scene sceneID="gz3-8T-GZm">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G7g-SO-pUk" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="detailview" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="G7g-SO-pUk" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LHm-ic-n0W">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

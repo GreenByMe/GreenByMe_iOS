@@ -9,19 +9,22 @@
 import Foundation
 import Alamofire
 class AppServerClient {
+  let personalToken : HTTPHeaders = ["jwt" : "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwicm9sZXMiOltdLCJpYXQiOjE2MDE4ODY3OTksImV4cCI6MTYwMzA5NjM5OX0.TzN7e-yhJkgzL_lu7EUP6tmXmDV7UwNnR3TklFs6vJs","Content-Type" : "application/json"]
+  
   
   enum GetFailureReason : Int , Error {
     case unAuthorized = 401
     case notFound = 404
   }
   
-  typealias getResult = Result<[Contents], GetFailureReason>
+  typealias getResult = Result<[Mission], GetFailureReason>
   typealias getCompletion = (_ result : getResult) -> Void
   typealias signUpResult = Result<SignUpData, GetFailureReason>
   typealias signUpCompletion = (_ result : signUpResult) -> Void
   typealias signInResult = Result<SignInData, GetFailureReason>
   typealias signInCompletion = (_ result : signInResult) -> Void
-
+  typealias homePageResult = Result<HomeView, GetFailureReason>
+  typealias getHomePage = (_ result : homePageResult) -> Void
   
   
   private func makeParameter(_ email:String, _ name: String, _ nickname : String, _ pwd:String) ->Parameters{
@@ -93,9 +96,8 @@ class AppServerClient {
   
   
    func getPopularMissions(completion :  @escaping getCompletion) {
-    let header : HTTPHeaders = ["Content-Type" : "application/json"]
     let url = APIConstraints.popularmission
-    let dataRequest = AF.request(url, method: .get, encoding: JSONEncoding.default, headers: header)
+    let dataRequest = AF.request(url, method: .get, encoding: JSONEncoding.default, headers: personalToken)
     .validate()
       .responseJSON { response in
         switch response.result {
@@ -120,9 +122,8 @@ class AppServerClient {
     }
   }
   func getPersonalMissions(completion :  @escaping getCompletion) {
-    let header : HTTPHeaders = ["Content-Type" : "application/json"]
     let url = APIConstraints.personalMission
-    let dataRequest = AF.request(url, method: .get, encoding: JSONEncoding.default, headers: header)
+    let dataRequest = AF.request(url, method: .get, encoding: JSONEncoding.default, headers: personalToken)
     .validate()
       .responseJSON { response in
         switch response.result {
@@ -144,6 +145,35 @@ class AppServerClient {
           }
           completion(.failure(nil))
       }
+    }
+  }
+  
+  
+  func homePageLoad(completion : @escaping getHomePage) {
+    let url = APIConstraints.home
+    let dataRequest = AF.request(url, method: .get, encoding: JSONEncoding.default, headers: personalToken)
+    .validate()
+      .responseJSON {
+        response in
+        switch response.result {
+        case .success :
+          do {
+                     guard let data = response.data else {
+                       completion(.failure(nil))
+                       return
+                     }
+                     let home = try JSONDecoder().decode(HomeView.self, from : data)
+            completion(.success(payload: home))
+                   }
+                   catch {
+                     completion(.failure(nil))
+                   }
+        case .failure(_) :
+          if let statusCode = response.response?.statusCode, let reason = GetFailureReason(rawValue: statusCode) {
+            completion(.failure(reason))
+          }
+          completion(.failure(nil))
+        }
     }
   }
 }
