@@ -56,6 +56,8 @@ class ServiceClient<T : Decodable> {
   
   func decodeResultData(response : AFDataResponse<Any>) -> getResult {
     guard let data = response.data else {
+      print("can't get data")
+      print(response)
       return .failure(nil)
     }
     do {
@@ -63,6 +65,7 @@ class ServiceClient<T : Decodable> {
       return .success(payload: decodedData)
     }
     catch {
+      print("decode fail")
       return .failure(nil)
     }
   }

@@ -5,13 +5,21 @@
 //  Created by 김태훈 on 2020/10/13.
 //  Copyright © 2020 kimtaehoon. All rights reserved.
 //
+
 import Foundation
 
 // MARK: - HomeView
 struct HomeView: Codable {
+    let data: DataClass
+    let status: Int
+    let message: String?
+}
+
+// MARK: - DataClass
+struct DataClass: Codable {
+    let userHomePageDetailDto: UserHomePageDetailDto
     let personalMissionHomePageDtos: [PersonalMissionHomePageDto]
     let popularMissionHomePageResponseDtos: [PopularMissionHomePageResponseDto]
-    let userHomePageDetailDto: UserHomePageDetailDto
 }
 
 // MARK: - PersonalMissionHomePageDto
@@ -27,10 +35,10 @@ struct PersonalMissionHomePageDto: Codable {
 
     enum CodingKeys: String, CodingKey {
         case endDate, finishCount, manyPeople
-        case missionID
+        case missionID = "missionId"
         case missionTitle
-        case personalMissionID
-        case pictureURL
+        case personalMissionID = "personalMissionId"
+        case pictureURL = "pictureUrl"
         case progress, remainPeriod, startDate, status
     }
 }
@@ -42,23 +50,85 @@ struct RemainPeriod: Codable {
 
 // MARK: - PopularMissionHomePageResponseDto
 struct PopularMissionHomePageResponseDto: Codable {
-    let endDate: String
-    let missionID, passCandidatesCount: Int
-    let pictureURL, startDate, subject: String
+    let missionID: Int
+    let subject, startDate, endDate: String
+    let passCandidatesCount: Int
+    let pictureURL: String
 
     enum CodingKeys: String, CodingKey {
-        case endDate
-        case missionID
-        case passCandidatesCount
-        case pictureURL
-        case startDate, subject
+        case missionID = "missionId"
+        case subject, startDate, endDate, passCandidatesCount
+        case pictureURL = "pictureUrl"
     }
 }
 
 // MARK: - UserHomePageDetailDto
 struct UserHomePageDetailDto: Codable {
-    let expectedCO2, expectedTree: Int
-    let nickName: String
-    let progressCampaign, progressRates: Int
-    let treeSentence: String
+    let nickName, treeSentence: String
+    let expectedCO2, expectedTree, progressRates, progressCampaign: Int
+}
+
+
+struct SignUpData : Codable {
+  var status : Int
+  var message : String
+  var data : String
+  enum CodingKeys:String, CodingKey {
+    case status = "status"
+    case message = "message"
+    case data = "data"
+  }
+  init(from decoder: Decoder) throws{
+    let values = try decoder.container(keyedBy: CodingKeys.self)
+    status = (try? values.decode(Int.self, forKey: .status)) ?? -1
+    message = (try? values.decode(String.self, forKey: .message)) ?? ""
+    data = (try? values.decode(String.self, forKey: .data)) ?? ""
+  }
+}
+
+struct SignInData : Codable {
+  var status : Int
+  var message : String
+  var data : String
+  enum CodingKeys:String, CodingKey {
+    case status = "status"
+    case message = "message"
+    case data = "data"
+  }
+  init(from decoder: Decoder) throws{
+    let values = try decoder.container(keyedBy: CodingKeys.self)
+    status = (try? values.decode(Int.self, forKey: .status)) ?? -1
+    message = (try? values.decode(String.self, forKey: .message)) ?? ""
+    data = (try? values.decode(String.self, forKey: .data)) ?? ""
+  }
+}
+// MARK: - PopularMissions
+struct PopularMissions: Codable {
+    let data: Missions
+    let status: Int
+    let message: String?
+}
+
+// MARK: - Missions
+struct Missions: Codable {
+    let totalPage, pageNumber: Int
+    let contents: [MissionCell]
+}
+
+// MARK: - MissionCell
+struct MissionCell: Codable {
+    let missionID: Int
+    let category, missionTitle, subject, contentDescription: String
+    let missionPictureURL: String
+    let dayCategory: String
+    let expectTree, expectCo2: Double
+    let passCandidatesCount: Int
+
+    enum CodingKeys: String, CodingKey {
+        case missionID = "missionId"
+        case category, missionTitle, subject
+        case contentDescription = "description"
+        case missionPictureURL = "missionPictureUrl"
+        case dayCategory, expectTree, expectCo2, passCandidatesCount
+    }
 }

@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import Alamofire
 import Action
 class CommoonViewModel : NSObject {
   let storage : MissionStorageType
@@ -15,7 +16,7 @@ class CommoonViewModel : NSObject {
     self.storage = storage
   }
 }
-class ViewModel : CommoonViewModel {
+class HomeViewModel : CommoonViewModel {
   
   private let disposeBag = DisposeBag()
   var onShowErr :((_ alert : SingleButtonAlert) -> Void)?
@@ -23,12 +24,10 @@ class ViewModel : CommoonViewModel {
   
   public let missions : PublishSubject<[Mission]> = PublishSubject()
   public let loading : PublishSubject<Bool> = PublishSubject()
-  
-  
-  
-  
-  
-  let serviceClient : ServiceClient<PopularMissionData> = ServiceClient(url: APIConstraints.popularmission, httpMethod: .get, header : ["jwt" : "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwicm9sZXMiOltdLCJpYXQiOjE2MDE4ODY3OTksImV4cCI6MTYwMzA5NjM5OX0.TzN7e-yhJkgzL_lu7EUP6tmXmDV7UwNnR3TklFs6vJs","Content-Type" : "application/json"])
+  public let homePageDto : PublishSubject<UserHomePageDetailDto> = PublishSubject()
+  public let personalMissions : PublishSubject<[PersonalMissionHomePageDto]> = PublishSubject()
+  public let popularMissions : PublishSubject<[PopularMissionHomePageResponseDto]> = PublishSubject()
+  private let headerWithKey : HTTPHeaders = ["jwt" : "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwicm9sZXMiOltdLCJpYXQiOjE2MDE4ODY3OTksImV4cCI6MTYwMzA5NjM5OX0.TzN7e-yhJkgzL_lu7EUP6tmXmDV7UwNnR3TklFs6vJs","Content-Type" : "application/json"]
   let Cells = Bindable([Mission]())
   let appServerClient : AppServerClient
   init (appServerClient : AppServerClient = AppServerClient(), _ store : MissionStorageType) {
@@ -36,30 +35,30 @@ class ViewModel : CommoonViewModel {
     super.init(storage: store)
   }
   
-  func getMissions2() {
-    showLoadingHud.value = true
+  func getHomePageInfo() {
+    let homePageService : ServiceClient<HomeView> = ServiceClient(url: APIConstraints.home, httpMethod: .get, header: ["jwt" : "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMCIsImlhdCI6MTYwNTI2Mzg5MywiZXhwIjoxNjA2NDczNDkzfQ.41j_yDM0CV0I8DCLeILC0aj6r4sS0KSmlFN7JsPcYdQ","Content-Type" : "application/json"])
     self.loading.onNext(true)
-    serviceClient.service(completion: { [weak self] result in
-      self?.showLoadingHud.value = false
+    homePageService.service(completion: { [weak self] result in
       
       switch result {
-      case .success(let popularMission) :
-
-        guard let mission : [Mission] = popularMission.data.contents else {
+      case .success(let homePage) :
+        guard let homepageDetails : UserHomePageDetailDto = homePage.data.userHomePageDetailDto else {
           return
         }
-        self?.missions.onNext(mission)
-        guard mission.count > 0 else {
-          self?.Cells.value = []
+        print(homepageDetails)
+        guard let personalMissions : [PersonalMissionHomePageDto] = homePage.data.personalMissionHomePageDtos else {
           return
         }
-        print(mission)
-        self?.Cells.value = mission
+        guard let popularMissions : [PopularMissionHomePageResponseDto] = homePage.data.popularMissionHomePageResponseDtos else { return }
+        self?.popularMissions.onNext(popularMissions)
+        self?.personalMissions.onNext(personalMissions)
+        self?.homePageDto.onNext(homepageDetails)
       case .failure(let error) :
-        self?.Cells.value = []
+        print(error)
       }
     })
   }
+  
   func saveContents(_ contents : [Mission] ) -> Observable<[Mission]> {
     return Observable.create { content in
       content.onNext(contents)

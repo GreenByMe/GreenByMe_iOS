@@ -12,24 +12,35 @@ import RxCocoa
 
 class PopularTableViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
-  let viewModel : ViewModel = ViewModel(MissionStorage())
+  let viewModel : PopularMissionsViewModel = PopularMissionsViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
+      viewModel.getPopularMissionList()
       bindViewModel()
+      
         // Do any additional setup after loading the view.
     }
+  @IBAction func backBtn(_ sender: Any) {
+    self.navigationController?.popViewController(animated: true)
+  }
   func bindViewModel() {
-    viewModel.popularMissionList.bind(to: tableView.rx.items(cellIdentifier: "tablecell", cellType: PopularMissionTableViewCell.self)) { (index, data, cell) in
+    viewModel.popularMissions.observeOn(MainScheduler.instance)
+      .bind(to: tableView.rx.items(cellIdentifier: "tablecell", cellType: PopularMissionTableViewCell.self)) { (index, data, cell) in
       print(data)
-      cell.title.text = data.title
-      cell.rank.text = String(index)
-      cell.missionImg.image = getimg(data.missionPictureUrl)
-      cell.duration.text = data.dayCategory + " | \(data.passCandidateCount)"
+        cell.title.text = data.subject
+        cell.rank.text = String(index + 1)
+        if index < 3 {
+          cell.rank.textColor = .orange
+        }
+        cell.missionImg.contentMode = .scaleToFill
+        cell.missionImg.image = getimg(data.missionPictureURL)
+        cell.duration.text = data.dayCategory + " | \(data.passCandidatesCount)"
     }.disposed(by: rx.disposeBag)
     
     func getimg(_ url : String) -> UIImage {
       let url = URL(string: url)
       let img = try! Data(contentsOf: url!)
+      let imgloaded : UIImage = UIImage(data: img)!
       return UIImage(data: img)!
     }
   }
