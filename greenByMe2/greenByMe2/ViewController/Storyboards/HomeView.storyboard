@@ -481,7 +481,7 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="O34-Tj-IGj">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="missionsDetail" id="O34-Tj-IGj" customClass="PersonalMissionCollectionViewCell" customModule="greenByMe2" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="160" height="175"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="CoH-oN-uC3">
@@ -556,6 +556,12 @@
                                                             </constraints>
                                                         </collectionViewCellContentView>
                                                         <size key="customSize" width="160" height="175"/>
+                                                        <connections>
+                                                            <outlet property="missionImg" destination="5gc-6Z-py5" id="HTt-0n-gHn"/>
+                                                            <outlet property="missionTitle" destination="91d-fa-G7J" id="RNj-ki-7NO"/>
+                                                            <outlet property="numbers" destination="rRd-Dv-Pxq" id="axw-Sg-yOE"/>
+                                                            <outlet property="progressStatus" destination="i6o-st-PIM" id="8vw-TZ-eP4"/>
+                                                        </connections>
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
@@ -592,6 +598,9 @@
                         <viewLayoutGuide key="safeArea" id="Wub-RK-Fxz"/>
                     </view>
                     <navigationItem key="navigationItem" title="진행중인 캠페인" id="RCJ-T7-2W4"/>
+                    <connections>
+                        <outlet property="personalMissions" destination="xtU-uh-WQc" id="r3d-ls-9lt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bCn-xW-Umv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -46,6 +46,7 @@
 		DAB24E8D255FC0FF00C72D59 /* PopularMissionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB24E8C255FC0FF00C72D59 /* PopularMissionsViewModel.swift */; };
 		DAB24E8F25627FF500C72D59 /* UserMissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB24E8E25627FF500C72D59 /* UserMissionViewController.swift */; };
 		DAB24E912562803400C72D59 /* userMissionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB24E902562803400C72D59 /* userMissionViewModel.swift */; };
+		DAB24E932563B65C00C72D59 /* PersonalMissionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB24E922563B65C00C72D59 /* PersonalMissionCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,7 @@
 		DAB24E8C255FC0FF00C72D59 /* PopularMissionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMissionsViewModel.swift; sourceTree = "<group>"; };
 		DAB24E8E25627FF500C72D59 /* UserMissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMissionViewController.swift; sourceTree = "<group>"; };
 		DAB24E902562803400C72D59 /* userMissionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userMissionViewModel.swift; sourceTree = "<group>"; };
+		DAB24E922563B65C00C72D59 /* PersonalMissionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalMissionCollectionViewCell.swift; sourceTree = "<group>"; };
 		FDC5B2FE3CD415FC790387B7 /* Pods_greenByMe2_greenByMe2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_greenByMe2_greenByMe2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -300,6 +302,7 @@
 				DA928C2F252B05500070B927 /* MyMissionCollectionViewCell.swift */,
 				DAA5382A252C47B300570146 /* PopularMissionTableViewCell.swift */,
 				DAA5382C252C47FB00570146 /* PopularTableViewController.swift */,
+				DAB24E922563B65C00C72D59 /* PersonalMissionCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -580,6 +583,7 @@
 				DAA5382F252C621700570146 /* MissionStorage.swift in Sources */,
 				DAA53831252C622700570146 /* MissionStorageType.swift in Sources */,
 				DA928C11252AD3310070B927 /* Services.swift in Sources */,
+				DAB24E932563B65C00C72D59 /* PersonalMissionCollectionViewCell.swift in Sources */,
 				DA928C1B252AD82E0070B927 /* Result.swift in Sources */,
 				DA928C0F252AD3160070B927 /* NetworkResult.swift in Sources */,
 				DA928BDC252AD25E0070B927 /* SceneDelegate.swift in Sources */,

@@ -9,6 +9,9 @@
 import UIKit
 
 class UserMissionViewController: UIViewController {
+  @IBOutlet weak var personalMissions: UICollectionView!
+  
+  
   private let identifier : String = "userMissionVC"
     override func viewDidLoad() {
         super.viewDidLoad()
