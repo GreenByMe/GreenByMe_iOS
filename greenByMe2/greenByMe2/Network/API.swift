@@ -22,7 +22,7 @@ struct APIConstraints {
   static let expectation = user + "/expectTreeCo2"
   static let images = user + "/images/"
   static let nickname = user + "/nickname/"
-  static let personalMission = user + "/personalMissions"
+  static let userPersonalMission = user + "/personalMissions"
   static let posts = user + "/posts"
   static let refresh = user + "/refresh"
   static let signin = user + "/signin"
@@ -34,5 +34,9 @@ struct APIConstraints {
   static let daycategory = "/daycategory/"
   static let missionImg = missionData + "/images/"
   static let popularmission = missionData + "/populars"
+  
+  
+  static let personalMission = baseURL + "personalmissions"
+
 }
 

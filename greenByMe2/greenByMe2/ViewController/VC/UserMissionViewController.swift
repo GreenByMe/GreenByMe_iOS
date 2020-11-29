@@ -7,18 +7,35 @@
 //
 
 import UIKit
-
+import RxSwift
+import RxCocoa
 class UserMissionViewController: UIViewController {
   @IBOutlet weak var personalMissions: UICollectionView!
-  
+  let viewModel = UserMissionViewModel()
   
   private let identifier : String = "userMissionVC"
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      viewModel.getPersonalMissionList()
+      bindViewModel()
         // Do any additional setup after loading the view.
     }
-    
+  func bindViewModel() {
+    viewModel.userMissionPublish.observeOn(MainScheduler.instance)
+      .bind(to : personalMissions.rx.items(cellIdentifier: "missionsDetail", cellType: PersonalMissionCollectionViewCell.self)) {
+        (index, data, cell) in
+        cell.missionImg.image = getimg(data.missionPictureURL)
+        cell.missionTitle.text = data.missionTitle
+        cell.numbers.text = "\(data.manyPeople)"
+        cell.progressStatus.text = "\(data.progress)"
+    }
+    func getimg(_ url : String) -> UIImage {
+      let url = URL(string: url)
+      let img = try! Data(contentsOf: url!)
+      let imgloaded : UIImage = UIImage(data: img)!
+      return UIImage(data: img)!
+    }
+  }
 
     /*
     // MARK: - Navigation

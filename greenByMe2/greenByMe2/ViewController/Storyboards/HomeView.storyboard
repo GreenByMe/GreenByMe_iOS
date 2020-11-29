@@ -192,6 +192,9 @@
                                                             <constraint firstAttribute="height" constant="28" id="xGG-DS-Amw"/>
                                                         </constraints>
                                                         <state key="normal" image="chevron.right" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="gotoPersonalMissionsView:" destination="rbU-zU-MFN" eventType="touchUpInside" id="oiI-Jl-2if"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인기 캠페인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Agk-Jw-HSO">
                                                         <rect key="frame" x="16" y="250" width="87.5" height="26"/>
@@ -284,7 +287,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="133" id="8oa-OG-khy"/>
                                                         </constraints>
-                                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zOP-Cg-6Gf">
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zOP-Cg-6Gf">
                                                             <size key="itemSize" width="128" height="128"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -292,18 +295,12 @@
                                                         </collectionViewFlowLayout>
                                                         <cells>
                                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="mymissionCell" id="LaD-HI-guN" customClass="MyMissionCollectionViewCell" customModule="greenByMe2" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                                <rect key="frame" x="0.0" y="2.5" width="128" height="128"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ir2-qt-zfr">
                                                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8uT-aN-cKg">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="128" height="85.5"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="width" secondItem="8uT-aN-cKg" secondAttribute="height" multiplier="145:97" id="jR1-ba-pdK"/>
-                                                                            </constraints>
-                                                                        </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘하루채식하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Osq-PC-06O">
                                                                             <rect key="frame" x="0.0" y="91.5" width="97" height="17"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -322,6 +319,12 @@
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8uT-aN-cKg">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="128" height="85.5"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" secondItem="8uT-aN-cKg" secondAttribute="height" multiplier="145:97" id="jR1-ba-pdK"/>
+                                                                            </constraints>
+                                                                        </imageView>
                                                                     </subviews>
                                                                     <constraints>
                                                                         <constraint firstItem="8uT-aN-cKg" firstAttribute="leading" secondItem="Ir2-qt-zfr" secondAttribute="leading" id="AJd-Yy-qhv"/>
@@ -481,7 +484,7 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="missionsDetail" id="O34-Tj-IGj" customClass="PersonalMissionCollectionViewCell" customModule="greenByMe2" customModuleProvider="target">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="missionsDetail" reuseIdentifier="missionsDetail" id="O34-Tj-IGj" customClass="PersonalMissionCollectionViewCell" customModule="greenByMe2" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="160" height="175"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="CoH-oN-uC3">
@@ -1212,6 +1215,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dUd-pQ-DaF">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="6y5-Zl-06A" kind="relationship" relationship="rootViewController" id="tlm-f2-4bW"/>
                     </connections>

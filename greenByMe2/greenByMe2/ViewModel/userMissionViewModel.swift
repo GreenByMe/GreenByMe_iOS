@@ -15,21 +15,24 @@ class UserMissionViewModel{
   private let disposeBag = DisposeBag()
   
   public let loading : PublishSubject<Bool> = PublishSubject()
-  public let userMissionPublish : PublishSubject<[MissionCell]> = PublishSubject()
-  private let headerWithKey : HTTPHeaders = ["jwt" : "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwicm9sZXMiOltdLCJpYXQiOjE2MDE4ODY3OTksImV4cCI6MTYwMzA5NjM5OX0.TzN7e-yhJkgzL_lu7EUP6tmXmDV7UwNnR3TklFs6vJs","Content-Type" : "application/json"]
+  public let userMissionPublish : PublishSubject<[userMissionCell]> = PublishSubject()
+  private let headerWithKey : HTTPHeaders = ["jwt" : "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZXMiOltdLCJpYXQiOjE2MDY0NzU1ODUsImV4cCI6MTYwNzY4NTE4NX0.jUofnfBQi4OtlwfzzXiFa_fxKXSwvz4MyCiUJ4SIVrE","Content-Type" : "application/json"]
   
   
-//  func getPopularMissionList() {
-//    let popularMissionList : ServiceClient<PopularMissions> = ServiceClient(url: APIConstraints.popularmission, httpMethod: .get, header: headerWithKey)
-//    self.loading.onNext(true)
-//    popularMissionList.service( completion : { [weak self] result in
-//      switch result {
-//      case .success(let missiondata) :
-//        guard let campains : [MissionCell] = missiondata.data.contents else {return}
-//        self?.popularMissions.onNext(campains)
-//      case .failure(let message) :
-//        print(message as Any)
-//      }
-//    })
-//  }
+  func getPersonalMissionList() {
+    let personalMissionList : ServiceClient<DTOForm<userMissions>> = ServiceClient(url: APIConstraints.personalMission, httpMethod: .get, header: headerWithKey)
+    self.loading.onNext(true)
+    personalMissionList.service(completion: { [weak self] result in
+      switch result {
+      case .success(payload: let missionData) :
+        
+        let campains : [userMissionCell] = missionData.data.contents
+        dump(campains)
+        self?.userMissionPublish.onNext(campains)
+      case .failure(let message) :
+        print(message as Any)
+      }
+    })
+  }
+
 }

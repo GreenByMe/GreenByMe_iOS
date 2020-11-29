@@ -26,6 +26,10 @@ class HomePageViewController: UIViewController {
     self.navigationController?.pushViewController(navi, animated: true)
     //self.push(navi, animated: true, completion: nil)
   }
+  @IBAction func gotoPersonalMissionsView(_ sender: Any) {
+    guard let navi = self.storyboard?.instantiateViewController(withIdentifier: "userMissionVC") as? UserMissionViewController else {return}
+    self.navigationController?.pushViewController(navi, animated: true)
+  }
   public let hompage = PublishSubject<UserHomePageDetailDto>()
   var viewModel : HomeViewModel = HomeViewModel(MissionStorage())
   var popularMissions : [PopularMissionHomePageResponseDto] = []

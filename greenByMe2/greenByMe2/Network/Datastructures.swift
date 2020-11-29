@@ -106,13 +106,36 @@ struct Missions: Codable {
     let totalPage, pageNumber: Int
     let contents: [MissionCell]
 }
+// MARK: - userMissions
+
+struct userMissions : Codable {
+  let totalPage, pageNumber : Int
+  let contents : [userMissionCell]
+}
+// MARK: - userMissionCell
+
+struct userMissionCell: Codable {
+    let personalMissionID, missionID: Int
+    let missionTitle: String
+    let finishCount, progress, manyPeople: Int
+    let startDate, endDate: String
+    let remainPeriod: RemainPeriod
+    let missionPictureURL: String
+
+    enum CodingKeys: String, CodingKey {
+        case personalMissionID = "personalMissionId"
+        case missionID = "missionId"
+        case missionTitle, finishCount, progress, manyPeople, startDate, endDate, remainPeriod
+        case missionPictureURL = "missionPictureUrl"
+    }
+}
 
 // MARK: - MissionCell
 struct MissionCell: Codable {
     let missionID: Int
     let category, missionTitle, subject, contentDescription: String
     let missionPictureURL: String
-    let dayCategory: String
+    let dayCategory : String
     let expectTree, expectCo2: Double
     let passCandidatesCount: Int
 
@@ -122,24 +145,6 @@ struct MissionCell: Codable {
         case contentDescription = "description"
         case missionPictureURL = "missionPictureUrl"
         case dayCategory, expectTree, expectCo2, passCandidatesCount
-    }
-}
-// MARK: - UserMissions
-struct UserMisisons: Codable {
-    let endDate: String
-    let finishCount, manyPeople, missionID: Int
-    let missionPictureURL, missionTitle: String
-    let personalMissionID, progress: Int
-    let remainPeriod: RemainPeriod
-    let startDate: String
-
-    enum CodingKeys: String, CodingKey {
-        case endDate, finishCount, manyPeople
-        case missionID = "missionId"
-        case missionPictureURL = "missionPictureUrl"
-        case missionTitle
-        case personalMissionID = "personalMissionId"
-        case progress, remainPeriod, startDate
     }
 }
 
