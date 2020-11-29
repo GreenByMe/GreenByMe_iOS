@@ -13,6 +13,9 @@ class UserMissionViewController: UIViewController {
   @IBOutlet weak var personalMissions: UICollectionView!
   let viewModel = UserMissionViewModel()
   
+  @IBAction func goBack(_ sender: Any) {
+    self.navigationController?.popViewController(animated: true)
+  }
   private let identifier : String = "userMissionVC"
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +32,7 @@ class UserMissionViewController: UIViewController {
         cell.numbers.text = "\(data.manyPeople)"
         cell.progressStatus.text = "\(data.progress)"
     }
+    let layout : UICollectionViewFlowLayout
     func getimg(_ url : String) -> UIImage {
       let url = URL(string: url)
       let img = try! Data(contentsOf: url!)

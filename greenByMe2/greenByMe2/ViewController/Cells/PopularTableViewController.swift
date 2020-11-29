@@ -36,7 +36,6 @@ class PopularTableViewController: UIViewController {
         cell.missionImg.image = getimg(data.missionPictureURL)
         cell.duration.text = data.dayCategory + " | \(data.passCandidatesCount)"
     }.disposed(by: rx.disposeBag)
-    
     func getimg(_ url : String) -> UIImage {
       let url = URL(string: url)
       let img = try! Data(contentsOf: url!)

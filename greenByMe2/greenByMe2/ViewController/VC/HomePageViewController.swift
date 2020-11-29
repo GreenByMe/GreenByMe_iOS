@@ -51,6 +51,7 @@ class HomePageViewController: UIViewController {
       cell.date.text = data.startDate
       cell.missionImg.image = self.getimg(data.pictureURL)
       cell.people.text = "\(data.manyPeople)명 도전중"
+      
       self.personalMissions.append(data)
     }.disposed(by: rx.disposeBag)
     
@@ -65,9 +66,11 @@ class HomePageViewController: UIViewController {
     viewModel.homePageDto.observeOn(MainScheduler.instance).subscribe(onNext: {(home) in
       self.userNAme.text = "안녕하세요 \(home.nickName)님"
       var sentence : String = home.treeSentence
-      sentence = sentence.replacingOccurrences(of: "<br><b><font color=\"#26B679\">", with: "\n")
+      sentence = sentence.replacingOccurrences(of: " <br><b><font color=\"#26B679\">", with: "\n")
       sentence = sentence.replacingOccurrences(of: "</font></b>", with: "")
-      self.userTree.text = "\(sentence)"
+
+      self.userTree.numberOfLines = 0
+      self.userTree.text = sentence
       self.userCampain.text = "\(home.progressCampaign)"
       self.userFootprint.text = String(format : "%.2f", home.expectedCO2)
       
