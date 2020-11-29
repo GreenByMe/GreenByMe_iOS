@@ -8,13 +8,13 @@
 
 import Foundation
 
-// MARK: - HomeView
-struct HomeView: Codable {
-    let data: DataClass
-    let status: Int
-    let message: String?
-}
+// MARK: - DTOForm
+public struct DTOForm<T:Codable> : Codable {
+  let data : T
+  let status : Int
+  let message : String?
 
+}
 // MARK: - DataClass
 struct DataClass: Codable {
     let userHomePageDetailDto: UserHomePageDetailDto
@@ -24,22 +24,21 @@ struct DataClass: Codable {
 
 // MARK: - PersonalMissionHomePageDto
 struct PersonalMissionHomePageDto: Codable {
-    let endDate: String
-    let finishCount, manyPeople, missionID: Int
+    let personalMissionID, missionID: Int
     let missionTitle: String
-    let personalMissionID: Int
+    let finishCount, progress: Int?
+    let manyPeople: Int
+    let startDate, endDate: String
+    let remainPeriod: RemainPeriod?
     let pictureURL: String
-    let progress: Int
-    let remainPeriod: RemainPeriod
-    let startDate, status: String
+    let status: String
 
     enum CodingKeys: String, CodingKey {
-        case endDate, finishCount, manyPeople
-        case missionID = "missionId"
-        case missionTitle
         case personalMissionID = "personalMissionId"
+        case missionID = "missionId"
+        case missionTitle, finishCount, progress, manyPeople, startDate, endDate, remainPeriod
         case pictureURL = "pictureUrl"
-        case progress, remainPeriod, startDate, status
+        case status
     }
 }
 
@@ -65,9 +64,9 @@ struct PopularMissionHomePageResponseDto: Codable {
 // MARK: - UserHomePageDetailDto
 struct UserHomePageDetailDto: Codable {
     let nickName, treeSentence: String
-    let expectedCO2, expectedTree, progressRates, progressCampaign: Int
+    let expectedCO2, expectedTree: Double
+    let progressRates, progressCampaign: Int
 }
-
 
 struct SignUpData : Codable {
   var status : Int
@@ -102,13 +101,6 @@ struct SignInData : Codable {
     data = (try? values.decode(String.self, forKey: .data)) ?? ""
   }
 }
-// MARK: - PopularMissions
-struct PopularMissions: Codable {
-    let data: Missions
-    let status: Int
-    let message: String?
-}
-
 // MARK: - Missions
 struct Missions: Codable {
     let totalPage, pageNumber: Int
@@ -132,3 +124,22 @@ struct MissionCell: Codable {
         case dayCategory, expectTree, expectCo2, passCandidatesCount
     }
 }
+// MARK: - UserMissions
+struct UserMisisons: Codable {
+    let endDate: String
+    let finishCount, manyPeople, missionID: Int
+    let missionPictureURL, missionTitle: String
+    let personalMissionID, progress: Int
+    let remainPeriod: RemainPeriod
+    let startDate: String
+
+    enum CodingKeys: String, CodingKey {
+        case endDate, finishCount, manyPeople
+        case missionID = "missionId"
+        case missionPictureURL = "missionPictureUrl"
+        case missionTitle
+        case personalMissionID = "personalMissionId"
+        case progress, remainPeriod, startDate
+    }
+}
+

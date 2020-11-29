@@ -57,3 +57,31 @@ struct Mission : Codable {
     }
   }
 
+
+struct http<T : Codable> : Codable {
+  let data : T
+  let message : String?
+  let status : Int
+}
+
+struct homepageDTO : Codable {
+  
+}
+
+
+protocol Mission3 {
+  var missionID: Int { get set }
+  var subject : String { get set }
+  var startDate : String { get set }
+  var endDate : String { get set }
+  var pictureURL : String { get set }
+}
+
+struct popularMissionDto : Codable , Mission3 {
+  var missionID: Int
+  var subject: String
+  var startDate: String
+  var endDate: String
+  var pictureURL: String
+}
+ 

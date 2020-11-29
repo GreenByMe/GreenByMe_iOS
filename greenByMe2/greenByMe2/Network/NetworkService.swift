@@ -9,9 +9,9 @@
 import Foundation
 import Alamofire
 
-class ServiceClient<T : Decodable> {
+class ServiceClient<T : Codable> {
   
-  let personalToken : HTTPHeaders = ["jwt" : "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwicm9sZXMiOltdLCJpYXQiOjE2MDE4ODY3OTksImV4cCI6MTYwMzA5NjM5OX0.TzN7e-yhJkgzL_lu7EUP6tmXmDV7UwNnR3TklFs6vJs","Content-Type" : "application/json"]
+  let personalToken : HTTPHeaders = ["jwt" : "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZXMiOltdLCJpYXQiOjE2MDY0NzU1ODUsImV4cCI6MTYwNzY4NTE4NX0.jUofnfBQi4OtlwfzzXiFa_fxKXSwvz4MyCiUJ4SIVrE","Content-Type" : "application/json"]
   let httpMethod : HTTPMethod
   let header : HTTPHeaders
   let parameters : Parameters?
@@ -61,6 +61,8 @@ class ServiceClient<T : Decodable> {
       return .failure(nil)
     }
     do {
+      dump(data)
+      dump(T.self)
       let decodedData = try JSONDecoder().decode(T.self, from: data)
       return .success(payload: decodedData)
     }

@@ -17,9 +17,9 @@ class PopularMissionsViewModel {
   public let loading : PublishSubject<Bool> = PublishSubject()
   public let popularMissions : PublishSubject<[MissionCell]> = PublishSubject()
   
-  private let headerWithKey : HTTPHeaders = ["jwt" : "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwicm9sZXMiOltdLCJpYXQiOjE2MDE4ODY3OTksImV4cCI6MTYwMzA5NjM5OX0.TzN7e-yhJkgzL_lu7EUP6tmXmDV7UwNnR3TklFs6vJs","Content-Type" : "application/json"]
+  private let headerWithKey : HTTPHeaders = ["jwt" : "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZXMiOltdLCJpYXQiOjE2MDY0NzU1ODUsImV4cCI6MTYwNzY4NTE4NX0.jUofnfBQi4OtlwfzzXiFa_fxKXSwvz4MyCiUJ4SIVrE","Content-Type" : "application/json"]
   func getPopularMissionList() {
-    let popularMissionList : ServiceClient<PopularMissions> = ServiceClient(url: APIConstraints.popularmission, httpMethod: .get, header: headerWithKey)
+    let popularMissionList : ServiceClient<DTOForm<Missions>> = ServiceClient(url: APIConstraints.popularmission, httpMethod: .get, header: headerWithKey)
     self.loading.onNext(true)
     popularMissionList.service( completion : { [weak self] result in
       switch result {

@@ -65,8 +65,9 @@ class HomePageViewController: UIViewController {
       sentence = sentence.replacingOccurrences(of: "</font></b>", with: "")
       self.userTree.text = "\(sentence)"
       self.userCampain.text = "\(home.progressCampaign)"
-      self.userFootprint.text = "\(home.expectedCO2)"
-      self.savedTree.text = "\(home.expectedTree)"
+      self.userFootprint.text = String(format : "%.2f", home.expectedCO2)
+      
+      self.savedTree.text = String(format : "%.2f",home.expectedTree)
       self.progressRate.constant = 328.0 * CGFloat(home.progressRates) / 328.0
     }).disposed(by: rx.disposeBag)
   }

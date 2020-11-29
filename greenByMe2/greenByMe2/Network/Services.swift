@@ -23,8 +23,6 @@ class AppServerClient {
   typealias signUpCompletion = (_ result : signUpResult) -> Void
   typealias signInResult = Result<SignInData, GetFailureReason>
   typealias signInCompletion = (_ result : signInResult) -> Void
-  typealias homePageResult = Result<HomeView, GetFailureReason>
-  typealias getHomePage = (_ result : homePageResult) -> Void
   
   
   private func makeParameter(_ email:String, _ name: String, _ nickname : String, _ pwd:String) ->Parameters{
@@ -94,31 +92,5 @@ class AppServerClient {
     }
   }
   
-  func homePageLoad(completion : @escaping getHomePage) {
-    let url = APIConstraints.home
-    let dataRequest = AF.request(url, method: .get, encoding: JSONEncoding.default, headers: personalToken)
-    .validate()
-      .responseJSON {
-        response in
-        switch response.result {
-        case .success :
-          do {
-                     guard let data = response.data else {
-                       completion(.failure(nil))
-                       return
-                     }
-                     let home = try JSONDecoder().decode(HomeView.self, from : data)
-            completion(.success(payload: home))
-                   }
-                   catch {
-                     completion(.failure(nil))
-                   }
-        case .failure(_) :
-          if let statusCode = response.response?.statusCode, let reason = GetFailureReason(rawValue: statusCode) {
-            completion(.failure(reason))
-          }
-          completion(.failure(nil))
-        }
-    }
-  }
+
 }
