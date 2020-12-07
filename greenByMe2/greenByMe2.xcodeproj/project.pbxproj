@@ -47,6 +47,8 @@
 		DAB24E8F25627FF500C72D59 /* UserMissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB24E8E25627FF500C72D59 /* UserMissionViewController.swift */; };
 		DAB24E912562803400C72D59 /* userMissionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB24E902562803400C72D59 /* userMissionViewModel.swift */; };
 		DAB24E932563B65C00C72D59 /* PersonalMissionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB24E922563B65C00C72D59 /* PersonalMissionCollectionViewCell.swift */; };
+		DAC78ADC257E43B7007889A5 /* MissionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC78ADB257E43B7007889A5 /* MissionDetailViewController.swift */; };
+		DAC78ADE257E457D007889A5 /* ModelDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC78ADD257E457D007889A5 /* ModelDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +120,8 @@
 		DAB24E8E25627FF500C72D59 /* UserMissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMissionViewController.swift; sourceTree = "<group>"; };
 		DAB24E902562803400C72D59 /* userMissionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userMissionViewModel.swift; sourceTree = "<group>"; };
 		DAB24E922563B65C00C72D59 /* PersonalMissionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalMissionCollectionViewCell.swift; sourceTree = "<group>"; };
+		DAC78ADB257E43B7007889A5 /* MissionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDetailViewController.swift; sourceTree = "<group>"; };
+		DAC78ADD257E457D007889A5 /* ModelDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDetailViewModel.swift; sourceTree = "<group>"; };
 		FDC5B2FE3CD415FC790387B7 /* Pods_greenByMe2_greenByMe2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_greenByMe2_greenByMe2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -279,6 +283,7 @@
 				DA928C1C252ADC2F0070B927 /* missionViewModel.swift */,
 				DAB24E8C255FC0FF00C72D59 /* PopularMissionsViewModel.swift */,
 				DAB24E902562803400C72D59 /* userMissionViewModel.swift */,
+				DAC78ADD257E457D007889A5 /* ModelDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -291,6 +296,7 @@
 				DA928BDD252AD25E0070B927 /* HomePageViewController.swift */,
 				DAB24E8A255FC0B900C72D59 /* PopularMissionViewController.swift */,
 				DAB24E8E25627FF500C72D59 /* UserMissionViewController.swift */,
+				DAC78ADB257E43B7007889A5 /* MissionDetailViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -400,6 +406,7 @@
 				TargetAttributes = {
 					DA928BD5252AD25E0070B927 = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 					};
 					DA928BEE252AD2610070B927 = {
 						CreatedOnToolsVersion = 11.6;
@@ -573,6 +580,7 @@
 				DA928C30252B05500070B927 /* MyMissionCollectionViewCell.swift in Sources */,
 				DA928C21252AE43E0070B927 /* UIViewControllerExtension.swift in Sources */,
 				DA928BDA252AD25E0070B927 /* AppDelegate.swift in Sources */,
+				DAC78ADE257E457D007889A5 /* ModelDetailViewModel.swift in Sources */,
 				DA928C1D252ADC2F0070B927 /* missionViewModel.swift in Sources */,
 				DA928C34252B0B6F0070B927 /* SignUpViewController.swift in Sources */,
 				DAA5382B252C47B300570146 /* PopularMissionTableViewCell.swift in Sources */,
@@ -596,6 +604,7 @@
 				DA928C1F252ADC560070B927 /* Mission.swift in Sources */,
 				DAB24E82255E4AB200C72D59 /* NetworkService.swift in Sources */,
 				DA928BE4252AD25E0070B927 /* greenByMe2.xcdatamodeld in Sources */,
+				DAC78ADC257E43B7007889A5 /* MissionDetailViewController.swift in Sources */,
 				DAB24E912562803400C72D59 /* userMissionViewModel.swift in Sources */,
 				DAB24E8D255FC0FF00C72D59 /* PopularMissionsViewModel.swift in Sources */,
 			);
@@ -763,6 +772,7 @@
 			baseConfigurationReference = C3055E79C418A685825D2D5B /* Pods-greenByMe2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7Y3Y9M4N4F;
 				INFOPLIST_FILE = greenByMe2/Info.plist;
@@ -772,6 +782,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.aaaa.greenByMe2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -782,6 +793,7 @@
 			baseConfigurationReference = 7063F3BDB4390D21FA02E393 /* Pods-greenByMe2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7Y3Y9M4N4F;
 				INFOPLIST_FILE = greenByMe2/Info.plist;

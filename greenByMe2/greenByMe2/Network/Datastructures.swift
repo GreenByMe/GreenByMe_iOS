@@ -147,4 +147,29 @@ struct MissionCell: Codable {
         case dayCategory, expectTree, expectCo2, passCandidatesCount
     }
 }
+// MARK: - DetailMisison
+struct DetailMisison: Codable {
+    let id: Int
+    let category, dayCategory, title, subject: String
+    let dataDescription: String
+    let expectTree, expectCo2: Double
+    let cumulativeCo2, cumulativeTree: Int
+    let pictureURL: String
+    let missionCertificationMethod: MissionCertificationMethod
+    let startDate, endDate: String
+    let passCandidatesCount, progressByMissionID: Int
 
+    enum CodingKeys: String, CodingKey {
+        case id, category, dayCategory, title, subject
+        case dataDescription = "description"
+        case expectTree, expectCo2, cumulativeCo2, cumulativeTree
+        case pictureURL = "pictureUrl"
+        case missionCertificationMethod, startDate, endDate, passCandidatesCount
+        case progressByMissionID = "progressByMissionId"
+    }
+}
+
+// MARK: - MissionCertificationMethod
+struct MissionCertificationMethod: Codable {
+    let title, text, missionCertificateCount: String
+}

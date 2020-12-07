@@ -13,6 +13,7 @@ class UserMissionViewController: UIViewController {
   @IBOutlet weak var personalMissions: UICollectionView!
   let viewModel = UserMissionViewModel()
   
+  @IBOutlet weak var addCampainBtn: UIButton!
   @IBAction func goBack(_ sender: Any) {
     self.navigationController?.popViewController(animated: true)
   }
